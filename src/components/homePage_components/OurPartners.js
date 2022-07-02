@@ -29,7 +29,7 @@ const OurPartners = () => {
         <div className={styles["image-box"]}>
           {featuredPartners.map((image, id) => (
             <div className={styles["image"]}>
-              <img src={image} key={id} alt="featuredPartners" />
+              <img loading="lazy" src={image} key={id} alt="featuredPartners" />
             </div>
           ))}
         </div>

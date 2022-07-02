@@ -11,7 +11,6 @@ const PendingBookings = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data.data);
         setPendingShoot(data.data);
       })
       .catch((error) => {
@@ -24,20 +23,25 @@ const PendingBookings = () => {
 
   return (
     <div className={styles["NewDashboard-photoshootCard"]}>
-      {pendingShoot.map((request, id) => (
-        <div className={styles["pending-booking__container"]} key={id}>
-          <h6>{request.date}</h6>
+      {pendingShoot
+        ?
+        pendingShoot.map((request, id) => (
+          <div className={styles["pending-booking__container"]} key={id}>
+            <h6>{request.date}</h6>
 
-          <div className={styles["pending-booking__inner"]}>
-            <h3>{request.location}</h3>
-            <p>₹ {request["c_package"]}</p>
+            <div className={styles["pending-booking__inner"]}>
+              <h3>{request.location}</h3>
+              <p>₹ {request["c_package"]}</p>
+            </div>
+            <div className={styles["pendingBookings-action__container"]}>
+              <button>Change</button>
+              <button>Delete</button>
+            </div>
           </div>
-          <div className={styles["pendingBookings-action__container"]}>
-            <button>Change</button>
-            <button>Delete</button>
-          </div>
-        </div>
-      ))}
+        ))
+        :
+        <h3 className={styles["no_confirm_booking_heading"]}>No confirmed bookings to show!</h3>
+      }
     </div>
   );
 };

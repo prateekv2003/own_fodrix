@@ -95,14 +95,14 @@
 
 .map_frame {
   width: 100%;
-  height: 312px;
+  height: 100%;
   border: 0;
 }
 
 .map {
   width: 85%;
   display: inline-block;
-  margin-top: 32px;
+  margin: 31px;
 }
 
 @media screen and (max-width: 580px) {
@@ -137,24 +137,23 @@
 
 .DateTime {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  gap: 2rem;
+  margin: 0 auto;
+  justify-content: center;
   padding: 10px;
   height: auto;
 }
 
-.datediv {
-  display: inline-block;
-  width: 167%;
+.datediv, .timediv{
+  display: flex;
+  flex-wrap: nowrap;
   font-size: 18px;
   font-weight: bolder;
+  align-items: baseline;
 }
 
-.timediv {
-  display: inline-block;
-  width: 152%;
-  font-size: 18px;
-  font-weight: bolder;
+.datediv label, .timediv label{
+  white-space: nowrap;
 }
 
 .date {
@@ -166,47 +165,25 @@
   margin: 4px;
 }
 
-.input_date {
-  width: 85%;
+.input_date, .input_time{
+  width: 20rem;
+  border: 2px solid black;
 }
 
-.input_time {
-  width: 90%;
+.input_time{
+  font-size: 20px;
 }
-
-/* 
-@media screen and (max-width: 700px) {
-  .DateTime {
-      flex-direction: column;
-  }
-  .timediv {
-      width: 100%;
-  }
-  .datediv {
-      width: 100%;
-  }
-} */
-
-/* 
-.request_booking {
-  justify-content: center;
-  width: 30%;
-  margin-left: 35%;
-  padding-bottom: 17px;
-} */
 
 #request_booking_btn {
-  width: 12%;
-  height: 50px;
+  margin: 2rem auto;
+  width: fit-content;
+  display: block;
+  padding: 0.4rem 0.8rem;
+  white-space: nowrap;
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
   align-items: center;
-  margin-left: 44%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 1rem;
-  line-height: 1.5;
   border-radius: 0.2rem;
   border: 1px solid transparent;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
@@ -214,11 +191,6 @@
 }
 
 @media screen and (max-width: 700px) {
-  #request_booking_btn {
-    width: 18%;
-    margin-left: 42%;
-  }
-
   .card-description,
   .touristSpots {
     font-size: 14px;
@@ -357,4 +329,23 @@
 
 .description_ph p {
   font-size: 15px;
+}
+
+@media (max-width: 1024px) {
+  .input_date, .input_time{
+    width: 18rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .DateTime{
+    flex-direction: column;
+    width: 80%;
+    margin: 29px;
+    padding: 0;
+  }
+
+  .input_date, .input_time{
+    width: 100%;
+  }
 }

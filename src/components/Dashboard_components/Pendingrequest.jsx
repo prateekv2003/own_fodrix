@@ -21,7 +21,6 @@ export default class Pendingrequest extends React.Component {
     let api = url + this.state.userEmail;
     let data = await fetch(api);
     let parseData = await data.json();
-    console.log(parseData);
     // let myshootdata = await parseData.data;
     this.setState({
       Data: parseData,

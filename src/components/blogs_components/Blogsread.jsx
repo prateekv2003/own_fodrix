@@ -15,7 +15,7 @@ const Blogsread = () => {
           <div class="flex">
             <div className="topblogs_components">
               <div className="grid">
-                <div class="content">
+                <div class="blog-content">
                   {" "}
                   <div className="grid-items" data-aos="fade-up">
                     <img src={Images.Mumbai} alt="Not available" />
@@ -39,7 +39,7 @@ const Blogsread = () => {
                     </div>
                   </div>
                 </div>
-                <div class="content">
+                <div class="blog-content">
                   <div className="grid-items" data-aos="fade-up">
                     <img src={Images.banglore} alt="Not available" />
                     <div className="img-description">
@@ -58,7 +58,7 @@ const Blogsread = () => {
                     </div>
                   </div>
                 </div>
-                <div class="content">
+                <div class="blog-content">
                   <div className="grid-items" data-aos="fade-up">
                     <img src={Images.banglore} alt="Not available" />
                     <div className="img-description">
@@ -75,7 +75,7 @@ const Blogsread = () => {
                     </div>
                   </div>
                 </div>
-                <div class="content">
+                <div class="blog-content">
                   <div className="grid-items" data-aos="fade-up">
                     <img src={Images.banglore} alt="Not available" />
                     <div className="img-description">
@@ -92,7 +92,7 @@ const Blogsread = () => {
                     </div>
                   </div>
                 </div>
-                <div class="content">
+                <div class="blog-content">
                   <div className="grid-items" data-aos="fade-up">
                     <img src={Images.banglore} alt="Not available" />
                     <div className="img-description">
@@ -109,7 +109,7 @@ const Blogsread = () => {
                     </div>
                   </div>
                 </div>
-                <div class="content">
+                <div class="blog-content">
                   <div className="grid-items" data-aos="fade-up">
                     <img src={Images.banglore} alt="Not available" />
                     <div className="img-description">
@@ -126,7 +126,7 @@ const Blogsread = () => {
                     </div>
                   </div>
                 </div>
-                <div class="content">
+                <div class="blog-content">
                   <div className="grid-items" data-aos="fade-up">
                     <img src={Images.banglore} alt="Not available" />
                     <div className="img-description">
@@ -143,7 +143,7 @@ const Blogsread = () => {
                     </div>
                   </div>
                 </div>
-                <div class="content">
+                <div class="blog-content">
                   <div className="grid-items" data-aos="fade-up">
                     <img src={Images.banglore} alt="Not available" />
                     <div className="img-description">
@@ -160,7 +160,7 @@ const Blogsread = () => {
                     </div>
                   </div>
                 </div>
-                <div class="content">
+                <div class="blog-content">
                   <div className="grid-items" data-aos="fade-up">
                     <img src={Images.banglore} alt="Not available" />
                     <div className="img-description">
@@ -177,7 +177,7 @@ const Blogsread = () => {
                     </div>
                   </div>
                 </div>
-                <div class="content">
+                <div class="blog-content">
                   <div className="grid-items" data-aos="fade-up">
                     <img src={Images.banglore} alt="Not available" />
                     <div className="img-description">
@@ -194,7 +194,7 @@ const Blogsread = () => {
                     </div>
                   </div>
                 </div>
-                <div class="content">
+                <div class="blog-content">
                   <div className="grid-items" data-aos="fade-up">
                     <img src={Images.banglore} alt="Not available" />
                     <div className="img-description">
@@ -211,7 +211,7 @@ const Blogsread = () => {
                     </div>
                   </div>
                 </div>
-                <div class="content">
+                <div class="blog-content">
                   <div className="grid-items" data-aos="fade-up">
                     <img src={Images.banglore} alt="Not available" />
                     <div className="img-description">

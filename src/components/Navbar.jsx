@@ -6,9 +6,6 @@ import { Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../plugins/navbar";
-import { Nav, Navbar, Container } from "react-bootstrap";
-import ProtectedRoute from "./Dashboard_components/Authentication/ProtectedRoute";
-import Dashboard from "./Dashboard_components/Dashboard";
 
 import "../css/Navbar.css";
 import Temp from "./Temp";
@@ -36,28 +33,9 @@ class NavBar extends React.Component {
   bookAShootHandler() {
     this.props.bookAShoot();
   }
-
-  // authenticated() {
-  //   console.log("component did mount is called");
-
-  //   if (global.loggeduserlogged === true) {
-  //     console.log("if excuted");
-  //     this.setState({
-  //       loginlink: "/dashboard",
-  //       logtext: "dashboard",
-  //     });
-  //   }
-  // }
+  
   render() {
     const show = this.state.menu ? "show" : "";
-
-    // if (Auth() === true) {
-    //   link = "/dashboard";
-    //   ltext = "Dashboard";
-    // }
-    // var navlog = window.localStorage.getItem("isAuth");
-    // console.log(navlog);
-    
     return (
       <>
         <nav
@@ -109,7 +87,7 @@ class NavBar extends React.Component {
               </Link>
               <a onClick={this.collapsMenu} className="nav-item nav-link" href="tel:07020147576">
                 {" "}
-                <i className="fas fa-phone-alt"> </i> 07020147576{" "}
+                <i className="fas fa-phone-alt"></i>&nbsp;07020147576{" "}
               </a>
               <Link onClick={this.collapsMenu} className="nav-item nav-link" to="/userdashboard">
                 {" "}

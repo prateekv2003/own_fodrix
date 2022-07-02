@@ -82,16 +82,16 @@ export default function ContactUs() {
                 <div className="topic">
                   <h4>Social Media</h4>
                   <div className="social_ctus">
-                    <a href="#">
+                    <a href="https://www.facebook.com/fodrix" target="_blank">
                       <i class="fab fa-facebook"></i>
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com/fodrixx/" target="_blank">
                       <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#">
+                    <a href="https://twitter.com/fodrixx" target="_blank">
                       <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#">
+                    <a href="https://linkedin.com/company/fodrix/" target="_blank">
                       <i class="fab fa-linkedin"></i>
                     </a>
                   </div>

@@ -5,8 +5,9 @@
   align-items: center;
   margin-top: -62px;
 }
-.content {
-  display: none;
+.blog-content {
+  /* display: none; */
+  display: block;
 }
 #loadMore {
   width: 200px;

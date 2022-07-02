@@ -17,9 +17,6 @@ import { useHistory } from "react-router";
 import OurPartners from "./homePage_components/OurPartners";
 export default function Home() {
   const [popupDisplay, setPopupDisplay] = useState(false);
-  // const [popupDisplayCounter, setPopupDisplayCounter] = useState(
-  //   localStorage.getItem("popCounter")
-  // );
   useEffect(() => {
     if (!sessionStorage.getItem("popupShown")) {
       setTimeout(() => {
@@ -46,7 +43,6 @@ export default function Home() {
   const history = useHistory();
 
   const [homeCity, sethomeCity] = useState(localStorage.getItem("city"));
-  // let homeCity = localStorage.getItem("city");
   return (
     <>
       {/* <Quote
@@ -149,15 +145,11 @@ export default function Home() {
         />
         <ExploreHome
           imgsrc={Images.banglore}
-          title="Bengaluru"
+          title="Bangalore"
           description="The city which lies in the South Indian state of India,
         Bengaluru is the marvellous capital of the state of Karnataka.The city is famous
         for its dazzling nightlife, silicon valley of India and high - tech business industry.The city holds prominent history with a bonus of modernity.
         "
-          onClick={function handleclick() {
-            localStorage.setItem("city", "Banglore");
-            history.push("/City_Home");
-          }}
           buttonlink="/City_Home"
           button="Explore"
         />
@@ -167,10 +159,6 @@ export default function Home() {
           description="The glorious city of Ahmedabad situated in the heart of Gujarat
         state, is one of the most amazing and old cities of India.The architecturally rich city is also India's first UNESCO's  World Heritage City.It is a perfect blend of a modernistic city and historical heritage.
         "
-          onClick={function handleclick() {
-            localStorage.setItem("city", "Ahmedabad");
-            history.push("/City_Home");
-          }}
           buttonlink="/City_Home"
           button="Explore"
         />
@@ -181,10 +169,6 @@ export default function Home() {
         of the most popular cities in India.The city is famous
         for its beauty, manufacturing hub of India and charm as well as prominent history.From the 1950 s, Pune was known as the Education & IT Hub of India.
         "
-          onClick={function handleclick() {
-            localStorage.setItem("city", "Pune");
-            history.push("/City_Home");
-          }}
           buttonlink="/City_Home"
           button="Explore"
         />
@@ -193,10 +177,6 @@ export default function Home() {
           title="Kolkata"
           description=" From the journey of Calcutta to Kolkata, the city has remarkably
         changed and made it to the top cities of India.Based in the state of West Bengal, Kolkata has a huge series of architectural and cultural aspects.The city is also the land of many historical events!"
-          onClick={function handleclick() {
-            localStorage.setItem("city", "Kolkata");
-            history.push("/City_Home");
-          }}
           buttonlink="/City_Home"
           button="Explore"
         />
@@ -208,10 +188,6 @@ export default function Home() {
         for holy temples but also full of delicious local food all around the city and particularly it is famous
         for shopping, the city is filled with diverse shopping malls.
         "
-          onClick={function handleclick() {
-            localStorage.setItem("city", "Chennai");
-            history.push("/City_Home");
-          }}
           buttonlink="/City_Home"
           button="Explore"
         />

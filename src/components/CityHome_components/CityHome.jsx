@@ -26,7 +26,6 @@ export default function CityHome() {
     try {
       const response = await fetch(apiKey + "getCityDetails/" + city);
       const cityData = await response.json();
-      // console.log(cityData);
       if (cityData.status === true) {
         //  console.log(cityData.data.id);
         setCitydetails(cityData.data);
@@ -162,11 +161,12 @@ export default function CityHome() {
       </div>
       <div className="DateTime">
         <div className="datediv">
-          <label for="date"> Date : </label>{" "}
+          <label for="date"> Date :&nbsp;</label>{" "}
           <input
             type="date"
             className="input_date"
             id="bookingdate"
+            min=""
             onClick={() => {
               var dtTod = new Date();
 
@@ -194,7 +194,7 @@ export default function CityHome() {
           />{" "}
         </div>{" "}
         <div className="timediv">
-          <label for="eventTime"> Time: </label>{" "}
+          <label for="eventTime"> Time :&nbsp;</label>{" "}
           {/* <input
             type="time"
             // list="timelist"

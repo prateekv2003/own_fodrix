@@ -39,7 +39,7 @@ const DashboardNav = (props) => {
             height="45px"
             style={{ borderRadius: "50%" }}
           />
-          <span>ABC</span>
+          <span>{localStorage.getItem("userFirstName")}</span>
         </div>
       </div>
       <div className={styles["DashboardNav-route__container"]}>
@@ -52,10 +52,10 @@ const DashboardNav = (props) => {
           <p>Profile</p>
         </Link>
         <div
-          className={styles["DashboardNav-route"]}
+          className={styles["DashboardNav-route"]+" "+styles["logout-btn"]}
           onClick={logoutDashboardHandler}
         >
-          <i class="fas fa-logout-arrow"></i>
+          <i class="fas fa-sign-out-alt" style={{color : "#007bff"}}></i>
           <p>Logout</p>
         </div>
       </div>

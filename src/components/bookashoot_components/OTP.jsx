@@ -3,7 +3,6 @@ import swal from "sweetalert";
 import "./otp.css";
 let apiKey = process.env.REACT_APP_CITY_HOME;
 const OTP = () => {
-  console.log("we r in OTP");
   const email = localStorage.getItem("email");
   const firstname = localStorage.getItem("first_name");
   const lastname = localStorage.getItem("last_name");
@@ -11,12 +10,9 @@ const OTP = () => {
   const password = localStorage.getItem("password");
 
   const sendOtptomail = async () => {
-    console.log("we are in sendOtptomail");
     const datareg = {
       to: email,
     };
-    console.log("stringify results" + JSON.stringify(datareg));
-    console.log("normaL results" + datareg);
     let otpreg = await fetch(apiKey + "/user/sendemailotp", {
       method: "POST",
       body: JSON.stringify(datareg),
@@ -25,23 +21,18 @@ const OTP = () => {
         "Content-Type": "application/json",
       },
     });
-    console.log("we are outside api executed successfully " + otpreg);
     const otpreg1 = await otpreg.json();
     if (otpreg1.status === true) {
-      // swal("Email OTP sent " + " " + otpreg1.message);
       swal(`Email OTP sent ${otpreg1.message}`);
     } else {
       swal(otpreg1.message).then(function () {
         window.location = "/";
       });
     }
-    // console.log("Email OTP sent " + otpreg1.status + otpreg1.message);
   };
 
   const verifyOtp = async () => {
-    console.log("we are in verify mail");
     const otpvalue1 = document.getElementById("otp_value").value;
-    console.log("otp value1" + otpvalue1);
     const otpreg = {
       otp: otpvalue1,
       email: email,
@@ -56,9 +47,7 @@ const OTP = () => {
       },
     });
     const otpreg2 = await otpverifyreg.json();
-    console.log("otpregister 2" + otpreg2.message + otpreg2.status);
     if (otpreg2.status === true) {
-      console.log("we are in if condition");
       const registerData = {
         // firstname1: firstname,
         // lastname1: lastname,

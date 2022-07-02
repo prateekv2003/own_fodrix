@@ -6,8 +6,10 @@ export default function Searchbox() {
   const history = useHistory();
   const [city, setCity] = useState("");
   const handleClick = () => {
-    localStorage.setItem("city", city);
-    history.push("/City_Home");
+    if(city){
+      localStorage.setItem("city", city);
+      history.push("/City_Home");
+    }
   };
   var textBox = document.getElementById("city_name");
   var button = document.getElementsByClassName("searchButton");
@@ -42,7 +44,7 @@ export default function Searchbox() {
               setCity(val.target.value);
             }}
           >
-            <option value="Agartala"> Search Destination </option>
+            <option value=""> Search Destination </option>
             <option value="Agartala"> Agartala </option>{" "}
             <option value="Agra"> Agra </option>{" "}
             <option value="Ahemadabad"> Ahemadabad </option>{" "}

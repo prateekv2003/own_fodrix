@@ -5,7 +5,7 @@ import HowitWorks from "./HowItWorks_components/HowItWorks";
 import Portfolio from "./portfolio_components/Portfolio";
 import Packages from "./packages_components/Packages";
 import RequestBooking from "./Requestbooking_components/RequestBooking";
-import AboutUs from "./aboutus_components/AboutUs";
+import AboutUsNew from "./aboutus_components/AboutUsNew";
 import loginjs from "./login_components/loginjs";
 import Login from "./login_components/Login";
 import Faq from "./faqs_components/Faq";
@@ -32,7 +32,7 @@ const Temp = () => {
             component={Dashboard}
           ></ProtectedRoute> */}
         <Route exact path="/about_us">
-          <AboutUs />
+          <AboutUsNew />
         </Route>{" "}
         <Route exact path="/login">
           <Login />

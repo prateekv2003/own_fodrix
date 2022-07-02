@@ -13,7 +13,6 @@ global.userfirstname = "";
 global.usermobileno = "";
 export var logged = null;
 let apiKey = process.env.REACT_APP_CITY_HOME;
-console.log(apiKey);
 
 export default function Login(props) {
   const history = useHistory();
@@ -257,7 +256,7 @@ export default function Login(props) {
           <div className="text-center privacy_text">
             By clicking on Create Account. I agree to Fodrix’s&nbsp;
             <a href="/privacyPolicy">Privacy Policy </a>and
-            <a href="/termsAndConditions"> Terms and Conditions</a>.
+            <a href="/tNc"> Terms and Conditions</a>.
           </div>
           <div class="u-form-group">
             <button onClick={RegisterClick}>Register</button>

@@ -228,11 +228,12 @@ ul#menu li {
 
 .wrapper .table {
   background: #fff;
-  width: calc(28% - 15px);
+  width: calc(30% - 15px);
+  height: fit-content;
   padding: 0px 30px;
   position: relative;
   box-shadow: 0 -9px 50px rgb(0 0 0 / 10%);
-  height: 540px;
+  /* height: 540px; */
 }
 
 .table .text {

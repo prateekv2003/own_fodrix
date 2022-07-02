@@ -151,7 +151,7 @@ export default function BecomeFodrixographer() {
               <img
                 src={Images.professionalism}
                 alt=" not Found"
-                // className="img_icon2"
+              // className="img_icon2"
               ></img>
             </div>
             <div>
@@ -171,7 +171,7 @@ export default function BecomeFodrixographer() {
               <img
                 src={Images.photographyequip}
                 alt=" not Found"
-                // className="img_icon2"
+              // className="img_icon2"
               ></img>
             </div>
             <div>
@@ -188,7 +188,7 @@ export default function BecomeFodrixographer() {
               <img
                 src={Images.stayupdated}
                 alt=" not Found"
-                // className="img_icon2"
+              // className="img_icon2"
               ></img>
             </div>
             <div>
@@ -215,47 +215,52 @@ export default function BecomeFodrixographer() {
           />
         </div>
         <div className="list_right">
-          <ol>
+          <ol type="1">
             <li>
-              <li className="list_number">01.</li>
-              <h4> Get notified</h4>
-              <p className="desc_how">
-                We’ll inform you about the shoot request based on your location
-                and you’ll preserve right to accept or reject the shoot request.
-              </p>
+              <div className="list_right_wrapper">
+                <h4> Get notified</h4>
+                <p className="desc_how">
+                  We’ll inform you about the shoot request based on your location
+                  and you’ll preserve right to accept or reject the shoot request.
+                </p>
+              </div>
             </li>
 
             <li>
-              <li className="list_number">02.</li>
-              <h4> Know your client</h4>
-              <p className="desc_how">
-                Get in touch with your client and discuss everything about the
-                shoot in detail.
-              </p>
+              <div className="list_right_wrapper">
+                <h4> Know your client</h4>
+                <p className="desc_how">
+                  Get in touch with your client and discuss everything about the
+                  shoot in detail.
+                </p>
+              </div>
             </li>
             <li>
-              <li className="list_number">03.</li>
-              <h4> Shoot day</h4>
-              <p className="desc_how">
-                Reach the shoot location 30 minutes prior to the shoot time.
-                Meet your clients and capture their awesome moments.
-              </p>
+              <div className="list_right_wrapper">
+                <h4> Shoot day</h4>
+                <p className="desc_how">
+                  Reach the shoot location 30 minutes prior to the shoot time.
+                  Meet your clients and capture their awesome moments.
+                </p>
+              </div>
             </li>
 
             <li>
-              <li className="list_number">04.</li>
-              <h4>Upload the photographs</h4>
-              <p className="desc_how">
-                Send us all the photographs within 24 hours after the shoot and
-                get back to your daily routine
-              </p>
+              <div className="list_right_wrapper">
+                <h4>Upload the photographs</h4>
+                <p className="desc_how">
+                  Send us all the photographs within 24 hours after the shoot and
+                  get back to your daily routine
+                </p>
+              </div>
             </li>
             <li>
-              <li className="list_number">05.</li>
-              <h4>Get paid</h4>
-              <p className="desc_how">
-                Receive the payment after you submit the photography work to us.
-              </p>{" "}
+              <div className="list_right_wrapper">
+                <h4>Get paid</h4>
+                <p className="desc_how">
+                  Receive the payment after you submit the photography work to us.
+                </p>{" "}
+              </div>
             </li>
           </ol>
         </div>

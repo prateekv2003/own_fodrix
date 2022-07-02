@@ -15,6 +15,12 @@ const NewUserDashboard = () => {
 
   const NewUserDashboardHandler = (e) => {
     e.preventDefault();
+    var city = document.getElementById("photoshoot-city").value;
+    localStorage.setItem("city", city)
+    var bookingdate = document.getElementById("photoshootDate").value;
+    localStorage.setItem("bookingdate", bookingdate)
+    var c_package = document.getElementById("photoshootPackage").value;
+    localStorage.setItem("c_package", c_package)
     paymentStart();
   };
 
@@ -199,6 +205,7 @@ const NewUserDashboard = () => {
             <select
               name="package"
               // defaultValue={Package}
+              id="photoshootPackage"
               required
             >
               <option value="">Select a package</option>
@@ -217,7 +224,7 @@ const NewUserDashboard = () => {
               id="photoshootDate"
               type="date"
               //   defaultValue={Date}
-              // min={new Date().toISOString().split("T")[0]}
+              min=""
               onClick={() => {
                 var dtTod = new Date();
 
@@ -233,9 +240,8 @@ const NewUserDashboard = () => {
                 }
 
                 var maxDate = year + "-" + month + "-" + day;
-
                 document
-                  .getElementById("bookingdate")
+                  .getElementById("photoshootDate")
                   .setAttribute("min", maxDate);
               }}
               required

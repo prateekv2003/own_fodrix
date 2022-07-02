@@ -103,11 +103,11 @@ export default function OurTeam() {
 
           <div className="team_member team_member4">
             <div className="member_img member_img4">
-              <img src={Images.Sarthak} alt="Avatar" />
+              <img src={Images.Atharva} alt="Avatar" />
               <div className="social_media">
                 <div className="linkedin item">
                   <a
-                    href="https://www.linkedin.com/in/sarthak-shukla-3b5a54118"
+                    href="https://www.linkedin.com/in/atharva-joshi-138a8a224"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -116,17 +116,17 @@ export default function OurTeam() {
                 </div>
               </div>
             </div>
-            <h3>Sarthak Shukla</h3>
+            <h3>Atharva Joshi</h3>
             <span>Developer</span>
           </div>
 
           <div className="team_member team_member5">
             <div className="member_img member_img5">
-              <img src={Images.Prashant} alt="Avatar" />
+              <img src={Images.Prateek} alt="Avatar" />
               <div className="social_media">
                 <div className="linkedin item">
                   <a
-                    href="https://www.linkedin.com/in/08mishra/"
+                    href="https://www.linkedin.com/in/prateekv2003"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -135,7 +135,7 @@ export default function OurTeam() {
                 </div>
               </div>
             </div>
-            <h3>Prashant</h3>
+            <h3>Prateek Vishwakarma</h3>
             <span>Developer</span>
           </div>
 

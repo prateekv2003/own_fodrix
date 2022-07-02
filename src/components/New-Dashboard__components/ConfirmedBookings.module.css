@@ -64,6 +64,10 @@
   justify-content: space-around;
 }
 
+.no_confirm_booking_heading{
+  margin-top: 2rem;
+}
+
 @media (max-width: 810px) {
   .NewDashboard-photoshootCard {
     justify-content: center;

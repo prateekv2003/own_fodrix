@@ -106,7 +106,7 @@
     display: inline-block;
     margin-top: 12px;
   }
-  .right-side_ctus .button_ctus input[type="button"] {
+  .right-side_ctus .button_ctus button[type="submit"] {
     color: #fff;
     font-size: 18px;
     outline: none;
@@ -117,8 +117,8 @@
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  .button_ctus input[type="button"]:hover {
-    background: #5029bc;
+  .right-side_ctus .button_ctus button[type="submit"]:hover {
+    background: #005bbc;
   }
    
   @media (min-width: 773px) {

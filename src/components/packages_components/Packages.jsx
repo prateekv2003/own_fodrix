@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import "./packages.css";
+import './packages_extra.css'
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter } from "react-router-dom";
 import "../../plugins/navbar";
-import PackageNavbar from "./PackageNavbar";
-import CardsPackage from "./CardsPackage";
-// import PackageNav from "./components/packages_components/PackageNavbar";
+import Searchbox from "../Searchbox_component/Searchbox";
+import PackageBar from "./PackageBar";
+import { packages } from "./PackageData";
 export default function Package() {
   useEffect(() => {
     const title = document.querySelector("title");
@@ -22,10 +22,20 @@ export default function Package() {
   }, []);
   return (
     <>
-      {/* <BrowserRouter>
-        <PackageNavbar />
-      </BrowserRouter> */}
-      <CardsPackage />
+      <div className="package_wrapper">
+        {
+          packages.map((package_object) => {
+            return <PackageBar package_object={package_object} />
+          })
+        }
+      </div>
+      
+      <div className="search_heading search_heading-packages">
+        <h3>Get an awesome photoshoot experience!</h3>
+      </div>
+      <div className="search_how">
+        <Searchbox />
+      </div>
     </>
   );
 }

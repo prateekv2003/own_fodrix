@@ -42,6 +42,10 @@
   color: black;
 }
 
+.DashboardNav-route.logout-btn{
+  cursor: pointer;
+}
+
 .DashboardNav-UserInfo img {
   margin-right: 0.6em;
 }

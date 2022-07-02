@@ -36,21 +36,18 @@ function paymentStart() {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
     })
     .catch((e) => {
       throw new Error(e);
     });
-  console.log("payment started..");
-  let amount = $("#package").val();
-  console.log(amount);
+  // let amount = $("#package").val();
+  let amount = photoshootPackage;
 
   if (amount === "" || amount === null || amount === undefined) {
     // alert("Amount is required");
     swal("Failed", "Amount is required", "error");
   } else {
     // book id
-    // console.log(apiKey);
     // $.ajax({
     //   url: url1,
     //   //{ apiKey } + "bookashoot",
@@ -59,10 +56,8 @@ function paymentStart() {
     //   type: "POST",
     //   dataType: "json",
     //   success: function (response) {
-    //     console.log("book a shootapi excuted successfully");
 
     //     //invoked when success
-    //     // console.log(response);
     //     //store the id from response  : statusId
     //   },
     // });
@@ -76,9 +71,7 @@ function paymentStart() {
       dataType: "json",
       success: function (response) {
         //invoked when success
-        // console.log(response);
         if (response.status === true) {
-          console.log("we are in payment status");
           //open payment form
           let options = {
             key: "rzp_live_SqbK2yknoKLD51",
@@ -114,7 +107,6 @@ function paymentStart() {
       },
       error: function (error) {
         //invoked when error
-        // console.log(error);
         alert("something went wrong");
       },
     });

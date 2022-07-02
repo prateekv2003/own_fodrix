@@ -77,7 +77,7 @@ export default function Testinomials() {
                   alt=" not Found"
                 /> */}
                 <img
-                  loading="eager"
+                  loading="lazy"
                   src={Images.mehul}
                   alt="Mehul-rastogi"
                   border="0"
@@ -134,7 +134,7 @@ export default function Testinomials() {
                   alt=" not Found"
                 /> */}
                 <img
-                  loading="eager"
+                  loading="lazy"
                   src={Images.ojaswi}
                   alt="ojaswi"
                   border="0"
@@ -193,7 +193,7 @@ export default function Testinomials() {
                   alt=" not Found"
                 /> */}
                 <img
-                  loading="eager"
+                  loading="lazy"
                   src={Images.zeeshan}
                   alt="Zeeshan"
                   border="0"
@@ -250,7 +250,7 @@ export default function Testinomials() {
                   alt=" not Found"
                 /> */}
                 <img
-                  loading="eager"
+                  loading="lazy"
                   src={Images.jyoti}
                   alt="Jyoti-singh"
                   border="0"
@@ -307,7 +307,7 @@ export default function Testinomials() {
                   alt=" not Found"
                 /> */}
                 <img
-                  loading="eager"
+                  loading="lazy"
                   src={Images.rishabh}
                   alt="rishabh"
                   width="90px"
@@ -365,7 +365,7 @@ export default function Testinomials() {
                   alt=" not Found"
                 /> */}
                 <img
-                  loading="eager"
+                  loading="lazy"
                   src={Images.harpreet}
                   alt="Harpreet-kaur"
                   border="0"

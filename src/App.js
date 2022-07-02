@@ -7,9 +7,6 @@ import PackagesBook from "./components/bookashoot_components/PackagesBook";
 import BookNow from "./components/bookashoot_components/BookNow";
 import privacyPolicy from "./components/footer_components/PrivacyPolicy";
 import CancPolicy from "./components/footer_components/CancPolicy";
-
-import Form from "./components/packages_components/Form";
-import usersdashboard from "./components/Dashboard_components/Userdashboard";
 import PhotographerLogin from "./components/login_components/PhotographerLogin";
 import PhotoshootServices from "./components/homePage_components/PhotoshootServices";
 
@@ -17,7 +14,6 @@ import Blog1 from "./components/blogs_components/Blog1";
 
 import PaymentForm from "./components/bookashoot_components/PaymentForm";
 import OTP from "./components/bookashoot_components/OTP.jsx";
-import CardsPackage from "./components/packages_components/CardsPackage";
 import CityHome from "./components/CityHome_components/CityHome";
 import Career from "./components/footer_components/Career";
 import BecomeFodrixographer from "./components/footer_components/BecomeFodrixographer";
@@ -25,19 +21,12 @@ import BecomePartner from "./components/footer_components/BecomePartner";
 import ContactUs from "./components/footer_components/contactUs";
 import BlogsHome from "./components/blogs_components/BlogsHome";
 import Blogsread from "./components/blogs_components/Blogsread";
-import ErrorFodrix from "./components/homePage_components/ErrorFodrix";
-import PackageNavbar from "./components/packages_components/PackageNavbar";
 import Testinomials from "./components/testinomial_components/Testinomials";
-
-import Dashboard from "./components/Dashboard_components/Dashboard";
 import NewDashboard from "./components/New-Dashboard__components/NewDashboard";
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/Dashboard_components/Authentication/ProtectedRoute";
-import Whatsapp from "./components/Whatsapp";
 import Footer from "./components/footer_components/Footer";
-import Footercity from "./components/footer_components/FooterComponent/FooterCity";
 import OfferAlert from "./mainUtils/OfferAlert";
-import DashboardProfile from "./components/New-Dashboard__components/DashboardProfile";
 import NewUserDashboard from "./components/Dashboard_components/NewUserDashboard";
 // global.loggedIn = true;
 

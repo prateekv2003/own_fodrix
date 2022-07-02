@@ -21,7 +21,8 @@ export default function Topfooter() {
                   <Link to="/packages">Packages</Link>
                 </li>
                 <li>
-                  <Link to="/blogsread">Blogs</Link>
+                  {/* <Link to="/blogsread">Blogs</Link> */}
+                  <a href="https://fodrix-blog-fodrix-photography.vercel.app">Blogs</a>
                 </li>
                 <li>
                   <Link to="/testimonial">Reviews</Link>

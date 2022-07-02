@@ -41,7 +41,7 @@ export default function BecomeFodrixographer() {
                 the surroundings.
               </p>
               <div className="read_more">
-                <a href="photoshoot_services" target="blank">
+                <a href="/userdashboard">
                   <button className="btn btn-primary" id="readmore_button">
                     Book Now
                   </button>
@@ -59,7 +59,7 @@ export default function BecomeFodrixographer() {
                 perfect day.
               </p>
               <div className="read_more">
-                <a href="photoshoot_services" target="blank">
+                <a href="/userdashboard">
                   <button className="btn btn-primary" id="readmore_button">
                     Book Now
                   </button>
@@ -77,7 +77,7 @@ export default function BecomeFodrixographer() {
                 with us.
               </p>
               <div className="read_more">
-                <a href="photoshoot_services" target="blank">
+                <a href="/userdashboard">
                   <button className="btn btn-primary" id="readmore_button">
                     Book Now
                   </button>
@@ -96,7 +96,7 @@ export default function BecomeFodrixographer() {
                 in front of cameras before your big day?
               </p>
               <div className="read_more">
-                <a href="photoshoot_services" target="blank">
+                <a href="/userdashboard">
                   <button className="btn btn-primary" id="readmore_button">
                     Book Now
                   </button>
@@ -115,7 +115,7 @@ export default function BecomeFodrixographer() {
                 capture their cute moments.
               </p>
               <div className="read_more">
-                <a href="photoshoot_services" target="blank">
+                <a href="/userdashboard">
                   <button className="btn btn-primary" id="readmore_button">
                     Book Now
                   </button>
@@ -134,7 +134,7 @@ export default function BecomeFodrixographer() {
                 photoshoots hassle-free.
               </p>
               <div className="read_more">
-                <a href="photoshoot_services" target="blank">
+                <a href="/userdashboard">
                   <button className="btn btn-primary" id="readmore_button">
                     Book Now
                   </button>
@@ -153,7 +153,7 @@ export default function BecomeFodrixographer() {
                 yet enjoyable family photoshoot.
               </p>
               <div className="read_more">
-                <a href="photoshoot_services" target="blank">
+                <a href="/userdashboard">
                   <button className="btn btn-primary" id="readmore_button">
                     Book Now
                   </button>
@@ -176,7 +176,7 @@ export default function BecomeFodrixographer() {
                 portfolio with Fodrix.
               </p>
               <div className="read_more">
-                <a href="photoshoot_services" target="blank">
+                <a href="/userdashboard">
                   <button className="btn btn-primary" id="readmore_button">
                     Book Now
                   </button>
@@ -194,7 +194,7 @@ export default function BecomeFodrixographer() {
                 of the memorable moments.
               </p>
               <div className="read_more">
-                <a href="photoshoot_services" target="blank">
+                <a href="/userdashboard">
                   <button className="btn btn-primary" id="readmore_button">
                     Book Now
                   </button>

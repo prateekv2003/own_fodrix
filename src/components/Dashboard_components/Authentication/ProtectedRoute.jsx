@@ -6,7 +6,6 @@ import swal from "sweetalert";
 
 // var navlog = window.localStorage.getItem("isAuth");
 var isAuth = localStorage.getItem("auth");
-console.log(isAuth);
 // console.log(navlog);
 
 //global.loggedIn === true || global.loggeduserlogged === true
@@ -16,7 +15,6 @@ function ProtectedRoute({ component: Component, ...rest }) {
     <Route
       {...rest}
       render={(props) => {
-        console.log(isAuth);
 
         if (
           global.loggedIn === true &&
@@ -27,7 +25,6 @@ function ProtectedRoute({ component: Component, ...rest }) {
           return <Component />;
         } else {
           swal("you need to login first!");
-          console.log("Props :->", props);
           return (
             <Redirect
               to={{ pathname: "/login", state: { from: props.location } }}

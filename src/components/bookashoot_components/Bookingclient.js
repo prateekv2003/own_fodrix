@@ -1,5 +1,4 @@
 export default async function BookingClient() {
-  console.log("we are in function");
   if (document.getElementById("name") !== undefined) {
     localStorage.setItem("name", document.getElementById("name").value);
     localStorage.setItem("email", document.getElementById("email").value);
@@ -10,10 +9,6 @@ export default async function BookingClient() {
     var name = localStorage.getItem("name");
     var email = localStorage.getItem("email");
     var mobile = localStorage.getItem("mobile");
-
-    console.log("msg", name);
-    console.log("email", email);
-    console.log("mobile", mobile);
     var location = document.getElementById("location").value;
 
     const data = {
@@ -34,7 +29,5 @@ export default async function BookingClient() {
     });
     result = await result.json();
     localStorage.setItem("user-details", JSON.stringify(result));
-    console.log(result);
-    console.log("users stored successfully");
   }
 }

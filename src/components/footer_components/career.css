@@ -17,6 +17,38 @@
   margin-bottom: 4vh !important;
 }
 
+.second {
+  text-align: center;
+}
+.second h4 {
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.main {
+  text-align: center;
+  padding: 15px;
+}
+
+.main h1 {
+  padding: 10px;
+}
+
+.main p {
+  font-size: 20px;
+}
+
+.join {
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.send {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
 /* .input_resume {
   width: 48%;
   margin-left: 2vw;
@@ -34,11 +66,17 @@ input[type="file"] {
   /* position: absolute; */
   margin: auto;
   margin-top: 6vh;
-  margin-bottom: 4vh ;
+  margin-bottom: 4vh;
   font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload_btn label:hover {
+  background-color: #026bdb;
 }
 
 @media (max-width: 1200px) {

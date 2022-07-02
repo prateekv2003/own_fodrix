@@ -30,15 +30,6 @@ let photographers = [
     description:
       "sodales accumsan ligula. Aenean sed diam tristique, fermentum minec, ornare arch.",
   },
-
-  {
-    name: "Himanshu Kesharwani",
-    location: "Kolkata, West Bengal",
-    profilePic: Images.Himanshukesharwani,
-    displayImages: [Images.Mumbai, Images.kerala, Images.kolkata, Images.pune],
-    description:
-      "sodales accumsan ligula. Aenean sed diam tristique, fermentum minec, ornare arch.",
-  },
 ];
 
 const FeaturedPhotographer = () => {
