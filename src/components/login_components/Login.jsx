@@ -5,7 +5,6 @@ import swal from "sweetalert";
 import "./login.css";
 import Images from "../../All_Images/Images";
 import loginjs from "./loginjs";
-import { Helmet } from "react-helmet";
 
 global.peruserEmail = "";
 global.loggedIn = true;
