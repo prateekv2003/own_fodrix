@@ -2,13 +2,12 @@ import React from "react";
 import "./Blogs_Home.css";
 
 import Images from "../../All_Images/Images";
-import { Helmet } from "react-helmet";
 const Blogsread = () => {
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Blogs | Fodrix</title>
-      </Helmet>
+      </Helmet> */}
       <h1 className="blogs_heading_components text-center">Blogs</h1>
       <div className="blogs_home_components">
         <div class="container">

@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import styles from "./DashboardBooking.module.css";
 import PendingBookings from "./PendingBookings";
 import ConfirmedBookings from "./ConfirmedBookings";
+import {BsPlusCircle} from "react-icons/bs";
+import {CgMenu} from "react-icons/cg";
 
-const DashboardBooking = () => {
+const DashboardBooking = (props) => {
   const [activeTab, setActiveTab] = useState(1);
   const confirm = useRef();
   const pending = useRef();
@@ -22,10 +24,14 @@ const DashboardBooking = () => {
   return (
     <div className={styles["NewDashboard-Body__container"]}>
       <div className={styles["NewDashboard-header"]}>
-        <h1>Bookings</h1>
+        <CgMenu className={styles["menu-btn"]} onClick={()=>props.menuDisplayHandler(true)}/>
+        <h1 className={styles["dashboard-heading"]}>Bookings</h1>
         <Link to="/userDashboard">
           <button>Book a photoshoot</button>
         </Link>
+        {/* <Link className={styles["bookAShoot_btn-link"]} title="Book a shoot!" to="/userDashboard">
+          <BsPlusCircle className={styles["bookAShoot_btn"]}/>
+        </Link> */}
       </div>
       <div className={styles["NewDashboard-booking__route"]}>
         <div

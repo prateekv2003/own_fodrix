@@ -3,6 +3,7 @@ import styles from "./DashboardNav.module.css";
 import Images from "../../All_Images/Images";
 import { Link, useHistory } from "react-router-dom";
 import { Dashboard } from "@material-ui/icons";
+import {CgClose} from "react-icons/cg";
 
 const DashboardNav = (props) => {
   const history = useHistory();
@@ -20,6 +21,9 @@ const DashboardNav = (props) => {
     classes = `${styles["DashboardNav-container"]}  ${styles["hamburgerNavDisplay"]}`;
   return (
     <div className={classes}>
+    <div className={styles["DashboardNav-close_icon"]}>
+      <CgClose onClick={() => props.menuDisplayHandler(false)} className={styles["closeMenu-btn"]}/>
+    </div>
       <div className={styles["DashboardNav-header__container"]}>
         <div className={styles["DashboardNav-logo"]}>
           <Link to="/">

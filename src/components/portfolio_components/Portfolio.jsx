@@ -5,7 +5,6 @@ import "../HowItWorks_components/how.css";
 import "./portfolio.css";
 import Whatsapp from "../Whatsapp";
 import CallbackPopup from "../../mainUtils/CallbackPopup";
-import { Helmet } from "react-helmet";
 export default function Portfolio() {
   useEffect(() => {
     const title = document.querySelector("title");

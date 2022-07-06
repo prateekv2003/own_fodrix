@@ -38,7 +38,7 @@ const Photoshoot = () => {
             </div>
           </div>
           <div className="grid-items" data-aos="fade-up">
-            <img loading="eager" src={Images.business} alt=" not Found" />
+            <img src={Images.business} alt=" not Found" />
             <div className="img-description">
               <h3>Business Shoot </h3>
               <p>

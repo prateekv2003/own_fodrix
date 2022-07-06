@@ -1,9 +1,25 @@
+.DashboardNav-close_icon{
+  position: relative;
+}
+
+.DashboardNav-close_icon .closeMenu-btn{
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  font-size: 2rem;
+}
+
 .DashboardNav-container {
   width: 15%;
   height: 100vh;
   text-align: center;
-  padding: 0.5em 1em;
+  padding: 0.5em;
   border-right: solid 1px #8989893d;
+  transition-property: display;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
 }
 
 .DashboardNav-header__container {
@@ -64,11 +80,8 @@
     z-index: 3;
     background-color: #fff;
   }
-  .DashboardNav-header__container {
-    margin-top: 2em;
-  }
-
-  .DashboardNav-close {
+  
+  .DashboardNav-close_icon .closeMenu-btn{
     display: block;
   }
 

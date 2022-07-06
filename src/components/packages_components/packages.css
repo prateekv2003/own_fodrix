@@ -214,7 +214,6 @@ ul#menu li {
 .sticky-top {
   position: sticky;
   top: 0;
-  z-index: 1020;
 }
 
 .heading {
@@ -229,11 +228,17 @@ ul#menu li {
 .wrapper .table {
   background: #fff;
   width: calc(30% - 15px);
-  height: fit-content;
+  /* height: fit-content; */
   padding: 0px 30px;
   position: relative;
   box-shadow: 0 -9px 50px rgb(0 0 0 / 10%);
-  /* height: 540px; */
+  height: 540px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.wrapper .table::-webkit-scrollbar {
+  width: 4px;
 }
 
 .table .text {
@@ -257,6 +262,8 @@ ul#menu li {
   display: flex;
   margin-top: 35px;
   justify-content: center;
+  position: sticky;
+  bottom: 0;
 }
 
 .table .btn button {

@@ -38,7 +38,7 @@
 @media (max-width: 645px) {
   .NewDashboard-container {
     overflow-y: visible;
-    height: 190vh;
+    /* height: 190vh; */
     background-color: #eff3fa;
   }
 }

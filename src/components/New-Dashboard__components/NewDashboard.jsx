@@ -20,31 +20,22 @@ const NewDashboard = () => {
   //   if (handle) setMenuDisplay(false);
   //   if (window.innerWidth >= 810) setMenuDisplay(true);
   // };
+  const menuDisplayHandler = (val)=>{
+    setMenuDisplay(val);
+  }
 
   return (
     <div className={styles["NewDashboard-container"]}>
-      <img
-        className={styles["NewDashboard-hamburger"]}
-        src={Images.hamburger}
-        onClick={() => setMenuDisplay(true)}
-      />
       {menuDisplay && (
         <DashboardNav
-          // largeDisplay={false}
-          // closeHandler={dashboardNavCloseHandler}
+          menuDisplayHandler={menuDisplayHandler} 
           sideNavDisplay={false}
         />
       )}
-      {menuDisplay && (
-        <p
-          className={styles["DashboardNav-close"]}
-          onClick={() => setMenuDisplay(false)}
-        >
-          X
-        </p>
-      )}
-      <DashboardNav sideNavDisplay={true} />
-      {currentPath == "dashboard" ? <DashboardBooking /> : <DashboardProfile />}
+
+      <DashboardNav menuDisplayHandler={menuDisplayHandler} sideNavDisplay={true} />
+
+      {currentPath == "dashboard" ? <DashboardBooking menuDisplayHandler={menuDisplayHandler}/> : <DashboardProfile menuDisplayHandler={menuDisplayHandler}/>}
     </div>
   );
 };

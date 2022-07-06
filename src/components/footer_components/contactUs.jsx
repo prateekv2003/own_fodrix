@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import CallbackAlert from "../../mainUtils/CallbackAlert";
 import "./Contact.css";
-import { Helmet } from "react-helmet";
 
 export default function ContactUs() {
   const clearNameValue = useRef();
