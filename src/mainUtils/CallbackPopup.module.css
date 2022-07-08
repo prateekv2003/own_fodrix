@@ -50,30 +50,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   background-color: #eff3fa;
   border-radius: 1.5em;
-  padding: 3em;
+  padding: 2em;
   position: fixed;
-  top: 6em;
+  top: 4em;
   overflow: hidden;
 }
 
-#popupHeader {
-  display: flex;
-  width: 50vw;
-  /* margin-top: 1em; */
-  justify-content: center;
-}
-
 #popupHeader h1 {
-  width: 40vw;
+  width: auto;
   text-align: center;
   font-size: 28px;
 }
 
 #closeIcon {
   color: rgb(139, 137, 137);
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
 }
 
 #popupForm__inputContainer {
@@ -244,7 +240,7 @@
   #popupContainer__inner,
   #popupCallbackContainer__inner {
     width: 70vw;
-    height: 75vh;
+    /* height: 75vh; */
   }
   #popupForm__inputContainer {
     width: 60vw;
@@ -288,6 +284,9 @@
     overflow-y: scroll;
     display: block;
     width: 25vw;
+  }
+  ::-webkit-scrollbar-thumb{
+    color: red;
   }
   .popup-photoshootType__Section1,
   .popup-photoshootType__Section2 {
@@ -357,7 +356,6 @@
   }
   #popupHeader {
     width: 80vw;
-    margin-top: 4em;
   }
   #popupHeader h1 {
     width: 75vw;
@@ -392,7 +390,7 @@
     width: 50%;
   }
   #photoshoot-city__container {
-    width: 65vw;
+    width: auto;
   }
 }
 
@@ -401,8 +399,12 @@
     width: 310px;
     height: 185px;
   }
-  #popupHeader {
-    margin-top: 15em;
+  #popupHeader h1{
+    font-size: 21px;
+  }
+  #closeIcon {
+    top: 1rem;
+    right: 1rem;
   }
   #popup-button {
     padding: 0.4em 3em;
@@ -418,9 +420,6 @@
     width: 45vw;
   }
   #photoshoot-city__container {
-    width: 75vw;
-  }
-  .popup__TextField {
-    width: 100%;
+    width: auto;
   }
 }

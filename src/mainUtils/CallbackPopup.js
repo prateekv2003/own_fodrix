@@ -150,15 +150,16 @@ const CallbackPopup = (props) => {
               allowFullScreen
             ></iframe>
           )}
+
           <div id={formContainer__inner}>
+            <CloseIcon
+              onClick={() => {
+                props.closePopup(false);
+              }}
+              id={styles.closeIcon}
+            />
             <div id={styles.popupHeader}>
               <h1>Looking for Photographer?</h1>
-              <CloseIcon
-                onClick={() => {
-                  props.closePopup(false);
-                }}
-                id={styles.closeIcon}
-              />
             </div>
             <div id={styles["popupForm__inputContainer"]}>
               <div className={styles["popupForm__input"]}>
