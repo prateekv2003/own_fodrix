@@ -22,7 +22,9 @@ export default function Topfooter() {
                 </li>
                 <li>
                   {/* <Link to="/blogsread">Blogs</Link> */}
-                  <a href="https://fodrix-blog-fodrix-photography.vercel.app">Blogs</a>
+                  <a href="https://fodrix-blog-fodrix-photography.vercel.app">
+                    Blogs
+                  </a>
                 </li>
                 <li>
                   <Link to="/testimonial">Reviews</Link>
@@ -42,7 +44,14 @@ export default function Topfooter() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="#">Fodrixographer Login</Link>
+                  <Link
+                    to={{
+                      pathname: "/pLogin",
+                      state: { isPhotographer: true }
+                    }}
+                  >
+                    Fodrixographer Login
+                  </Link>
                 </li>
               </ul>
             </div>

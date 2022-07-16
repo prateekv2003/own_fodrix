@@ -13,13 +13,13 @@
   align-items: center;
 }
 
-.NewDashboard-header .menu-btn{
+.NewDashboard-header .menu-btn {
   display: none;
   font-size: 2rem;
   margin-right: 1rem;
 }
 
-.dashboard-heading{
+.dashboard-heading {
   font-size: 2rem;
   margin: 0;
 }
@@ -75,7 +75,6 @@
 }
 
 @media (max-width: 1125px) {
-
   .NewDashboard-photoshootCard {
     width: 100%;
     justify-content: start;
@@ -87,6 +86,7 @@
 
   .NewDashboard-photoshootCard__section2 {
     width: 100%;
+    gap: 1rem;
     height: fit-content;
     flex-direction: column;
   }
@@ -105,8 +105,8 @@
   .NewDashboard-booking__route {
     margin-left: 1rem;
   }
-  
-  .NewDashboard-header .menu-btn{
+
+  .NewDashboard-header .menu-btn {
     display: block;
   }
 }
@@ -123,3 +123,25 @@
     width: 100%;
   }
 }
+
+/*============ CSS for LEADS ===========*/
+.table-responsive{
+  position: relative;
+}
+.cell-1 {
+  cursor: pointer;
+}
+.thead {
+  background: #dddcdc;
+  position: sticky;
+  top: 0;
+  transform: translateY(-1px);
+}
+.thead th {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+} 
+.table-body td {
+  text-align: center;
+} 

@@ -10,8 +10,6 @@ import CancPolicy from "./components/footer_components/CancPolicy";
 import PhotographerLogin from "./components/login_components/PhotographerLogin";
 import PhotoshootServices from "./components/homePage_components/PhotoshootServices";
 
-import Blog1 from "./components/blogs_components/Blog1";
-
 import PaymentForm from "./components/bookashoot_components/PaymentForm";
 import OTP from "./components/bookashoot_components/OTP.jsx";
 import CityHome from "./components/CityHome_components/CityHome";
@@ -19,8 +17,6 @@ import Career from "./components/footer_components/Career";
 import BecomeFodrixographer from "./components/footer_components/BecomeFodrixographer";
 import BecomePartner from "./components/footer_components/BecomePartner";
 import ContactUs from "./components/footer_components/contactUs";
-import BlogsHome from "./components/blogs_components/BlogsHome";
-import Blogsread from "./components/blogs_components/Blogsread";
 import Testinomials from "./components/testinomial_components/Testinomials";
 import NewDashboard from "./components/New-Dashboard__components/NewDashboard";
 import Navbar from "./components/Navbar";
@@ -28,6 +24,8 @@ import ProtectedRoute from "./components/Dashboard_components/Authentication/Pro
 import Footer from "./components/footer_components/Footer";
 import OfferAlert from "./mainUtils/OfferAlert";
 import NewUserDashboard from "./components/Dashboard_components/NewUserDashboard";
+import PackageModal from "./components/package_modal/PackageModal";
+import RegisterPage from "./components/bookashoot_components/Register";
 // global.loggedIn = true;
 
 function App() {
@@ -47,8 +45,6 @@ function App() {
         <Route exact path="/packages_book" component={PackagesBook} />
         <Route exact path="/pLogin" component={PhotographerLogin} />
 
-        <Route exact path="/blog1" component={Blog1} />
-
         <Route exact path="/payment" component={PaymentForm} />
         <Route exact path="/OTP" component={OTP} />
         <Route exact path="/City_Home" component={CityHome} />
@@ -66,24 +62,9 @@ function App() {
           path="/photoshoot_services"
           component={PhotoshootServices}
         />
-        <Route exact path="/blogs" component={BlogsHome} />
-        <Route exact path="/blogsread" component={Blogsread} />
-
-        {/* <Route exact path="/travel" component={CardsPackage}></Route> */}
-        {/* <Route exact path="/cb_wedding" component={PackageNavbar}></Route>
-
-        <Route exact path="/cb_business" component={PackageNavbar}></Route>
-        <Route exact path="/cb_baby" component={PackageNavbar}></Route>
-        <Route exact path="/cb_prewedding" component={PackageNavbar}></Route>
-        <Route exact path="/cb_maternity" component={PackageNavbar}></Route>
-        <Route
-          exact
-          path="/cb_personalportrait"
-          component={PackageNavbar}
-        ></Route> */}
-        {/* <Route exact path="/cb_family" component={PackageNavbar}></Route>
-        <Route exact path="/cb_others" component={PackageNavbar}></Route> */}
         <Route exact path="/dashboard/profile" component={NewDashboard} />
+        <Route exact path="/book_package" component={PackageModal} />
+        <Route exact path="/test" component={RegisterPage} />
         <ProtectedRoute
           exact
           path="/userdashboard"
@@ -96,11 +77,6 @@ function App() {
           component={NewDashboard}
         ></ProtectedRoute>
       </Switch>
-
-      {/* <Route>
-        <PackageNavbar />
-      </Route> */}
-      {/* <Route exact strict component={ErrorFodrix} /> */}
       {history.location.pathname.includes("dashboard") ? null : <Footer />}
     </>
   );

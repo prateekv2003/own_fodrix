@@ -7,6 +7,7 @@
   word-spacing: 5px;
   margin-bottom: 50px;
   color: #2c3148;
+  margin-top: 20px;
 }
 .main-div-faq {
   margin: 10px;
@@ -51,6 +52,7 @@
   padding: 19px;
   font-size: 14px;
   /* word-spacing: 2px; */
+  padding-left: 50px;
   font-weight: 400;
   line-height: 1.7;
   background: rgba(203, 224, 231, 0.959);
@@ -61,7 +63,7 @@
   font-size: 800;
 }
 
-.loadmore-faq{
+.loadmore-faq {
   margin-top: 12px !important;
 }
 
@@ -90,9 +92,10 @@
   }
   .answers {
     width: 80vw !important;
+    padding-left: 20px;
   }
 
-  .main-div-faq{
+  .main-div-faq {
     margin-left: 0;
     margin: auto;
   }

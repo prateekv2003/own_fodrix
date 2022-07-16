@@ -229,7 +229,7 @@ const NewUserDashboard = () => {
                 var dtTod = new Date();
 
                 var month = dtTod.getMonth() + 1;
-                var day = dtTod.getDate() + 2;
+                var day = dtTod.getDate() + 3;
                 var year = dtTod.getFullYear();
 
                 if (month < 10) {

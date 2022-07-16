@@ -34,9 +34,6 @@ export default function Login(props) {
   };
 
   const LoginClick = async () => {
-    // const firstname = localStorage.getItem("first_name");
-    // const lemail = localStorage.getItem("email");
-    // const mobile = localStorage.getItem("mobile");
     console.log("we are in login click");
 
     const loginData = {
@@ -58,6 +55,7 @@ export default function Login(props) {
     // swal("Login Details" + loginResponse.status + loginResponse.message);
     if (loginResponse.status === true) {
       localStorage.setItem("userFirstName", loginResponse.data.b_firstname);
+      localStorage.setItem("userLastName", loginResponse.data.b_lastname);
       localStorage.setItem("userMobile", loginResponse.data.b_mobile);
       localStorage.setItem("userEmail", loginResponse.data.b_email);
 
@@ -109,24 +107,24 @@ export default function Login(props) {
           alt="Fodrix Logo"
           width="50px"
           height="137px"
-          style={{ "paddingBottom": "13px" }}
+          style={{ paddingBottom: "13px" }}
         />
         <div class="btn-group">
           <button
             type="button"
-            className="btn btn--preferred active signup-link"
+            className="btn btn--preferred signup-link"
             id="signup-box-link"
             onClick={loginjs}
-            style={{ backgroundColor: "#007bff", color: "white" }}
+            style={{ borderLeft: "1px solid #ddd" }}
           >
             Register
           </button>
 
           <button
             type="button"
-            className="btn btn--preferred login-link"
+            className="btn btn--preferred active login-link"
             id="login-box-link"
-            style={{ "borderLeft": "1px solid #ddd" }}
+            style={{ backgroundColor: "#007bff", color: "white" }}
             onClick={loginjs}
           >
             Log in
@@ -164,7 +162,17 @@ export default function Login(props) {
           </div>
 
           <div class="u-form-group">
-            <button onClick={LoginClick}>Log in</button>
+            <button
+              onClick={() => {
+                if (lpassword !== "" || lemail !== "") {
+                  LoginClick();
+                } else {
+                  swal("All fields are compulsory!");
+                }
+              }}
+            >
+              Log in
+            </button>
           </div>
 
           <div class="foot-lnk">
@@ -181,7 +189,7 @@ export default function Login(props) {
             </label>
           </div>
         </div>
-        <form class="email-signup">
+        <form class="email-signup" onSubmit={RegisterClick}>
           <label for="u-form" className="label_login">
             First Name
           </label>
@@ -258,13 +266,13 @@ export default function Login(props) {
             <a href="/tNc"> Terms and Conditions</a>.
           </div>
           <div class="u-form-group">
-            <button onClick={RegisterClick}>Register</button>
+            <button type="submit">Register</button>
           </div>
           <div class="foot-lnk_r">
             <label for="pass">
               Already Have an account?
               <a href="#" className="login-link" onClick={loginjs}>
-              &nbsp;Log in
+                &nbsp;Log in
               </a>
             </label>
           </div>

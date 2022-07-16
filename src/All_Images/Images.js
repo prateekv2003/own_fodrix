@@ -36,7 +36,7 @@ const Images = {
   Wedding: require("../All_Images/photoshoot_home/WeddingService.webp").default,
   prewedding: require("../All_Images/photoshoot_home/Preweddingshoot.webp")
     .default,
-  otherServce: require("../All_Images/photoshoot_home/Otherservice.webp")
+  otherService: require("../All_Images/photoshoot_home/Otherservice.webp")
     .default,
   PersonalPortrait:
     require("../All_Images/ImageToCompress/Personalportrait.jpg").default,

@@ -9,6 +9,9 @@ const OTP = () => {
   const mobile = localStorage.getItem("mobile");
   const password = localStorage.getItem("password");
 
+  // Checking is it is photographer registration.
+  const pRegistration = localStorage.getItem("pRegistration"); 
+
   const sendOtptomail = async () => {
     const datareg = {
       to: email,
@@ -33,49 +36,55 @@ const OTP = () => {
 
   const verifyOtp = async () => {
     const otpvalue1 = document.getElementById("otp_value").value;
-    const otpreg = {
-      otp: otpvalue1,
-      email: email,
-    };
-
-    const otpverifyreg = await fetch(apiKey + "/verify_otp", {
-      method: "POST",
-      body: JSON.stringify(otpreg),
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    });
-    const otpreg2 = await otpverifyreg.json();
-    if (otpreg2.status === true) {
-      const registerData = {
-        // firstname1: firstname,
-        // lastname1: lastname,
-        // email1: email,
-        // mobile1: mobile,
-        // password1: password,
-
-        b_firstname: firstname,
-        b_lastname: lastname,
-        b_email: email,
-        b_mobile: mobile,
-        b_password: password,
+    console.log(otpvalue1)
+    if(otpvalue1 !== ""){
+      const otpreg = {
+        otp: otpvalue1,
+        email: email,
       };
 
-      await fetch(apiKey + "/register_user", {
+      const otpverifyreg = await fetch(apiKey + "/verify_otp", {
         method: "POST",
-        body: JSON.stringify(registerData),
+        body: JSON.stringify(otpreg),
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
       });
-      // const otpreg3 = await otpverifyreg1.json();
-      swal("User register successfully").then(function () {
-        window.location = "/login";
-      });
-    } else {
-      alert("Incorrect OTP");
+      const otpreg2 = await otpverifyreg.json();
+      if (otpreg2.status === true) {
+        const registerData = {
+          // firstname1: firstname,
+          // lastname1: lastname,
+          // email1: email,
+          // mobile1: mobile,
+          // password1: password,
+
+          b_firstname: firstname,
+          b_lastname: lastname,
+          b_email: email,
+          b_mobile: mobile,
+          b_password: password,
+        };
+        const api = pRegistration ? "/register_photographer" : "/register_user"
+        await fetch(apiKey + api, {
+          method: "POST",
+          body: JSON.stringify(registerData),
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        });
+        // const otpreg3 = await otpverifyreg1.json();
+
+        swal("User register successfully").then(function () {
+          window.location = pRegistration ? "/pLogin" : "/login";
+        });
+      } else {
+        alert("Incorrect OTP");
+      }
+    }else{
+      swal("Please enter a valid OTP!")
     }
   };
 

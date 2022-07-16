@@ -31,7 +31,7 @@
     position: relative;
   }
   .content_ctus .left-side_ctus::before {
-    content_ctus: "";
+    content: "";
     position: absolute;
     height: 70%;
     width: 2px;

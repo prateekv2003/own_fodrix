@@ -82,21 +82,28 @@
   margin-left: 74px;
   margin-bottom: -120px;
 }
+
+.sub_heading_become h3 {
+  padding-left: 15px;
+}
 .list_right {
   margin-top: 5%;
   width: 50%;
 }
 
-.list_right li{
+.list_right ol {
+  padding-left: 30px;
+}
+.list_right li {
   list-style: decimal;
 }
 
-.list_right li::marker{
+.list_right li::marker {
   font-size: 1.5rem;
   line-height: 0.6rem;
 }
 
-.list_right_wrapper{
+.list_right_wrapper {
   margin-left: 1rem;
 }
 .list_number {

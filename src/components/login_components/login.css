@@ -7,15 +7,15 @@
 .btn-group,
 .btn-group-vertical {
   position: relative;
-  display: inline-flex;
   vertical-align: middle;
   width: 76%;
-  margin-left: 58px;
-
+  margin-inline: auto;
   border: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .btn-group .btn {
-  flex: 1 1 auto;
+  /* flex: 1 1 auto; */
   margin: 0;
   padding-left: 0;
   padding-right: 0;
@@ -51,7 +51,7 @@
   position: relative;
   margin: 10px auto;
   width: 500px;
-  height: 716px;
+  /* height: 716px; */
   background-color: #fff;
   padding: 10px;
   border-radius: 3px;
@@ -63,7 +63,7 @@
 .email-login,
 .email-signup {
   position: relative;
-  float: left;
+  /* float: left; */
   width: 100%;
   height: auto;
   margin-top: 20px;
@@ -105,6 +105,9 @@
   text-transform: uppercase;
   background: #007bff;
 }
+.u-form-group button:hover{
+  background: #005bbc;
+}
 .forgot-password {
   width: 50%;
   text-align: left;
@@ -130,19 +133,11 @@
     width: 88%;
   }
 
-  .u-form-group input {
-    text-align: center;
-  }
-
   .label_login {
     /* margin-left: 0;
     display: inline-block; */
     display: flex;
-    margin-left: 4vw;
-  }
-
-  .btn-group {
-    margin-left: 41px;
+    margin-left: 6%;
   }
 }
 

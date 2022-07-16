@@ -1,7 +1,7 @@
 .photoshoot_home {
-  width: 90%;
+  /* width: 90%; */
   margin: 70px auto;
-  margin-top: -45px;
+  /* margin-top: -45px; */
 }
 .heading_photoshoot {
   font-size: 2.5em;
@@ -119,12 +119,13 @@
     text-align: center;
   } */
   .photoshoot_home {
-    width: 90%;
+    /* width: 90%; */
+    margin: 30px auto;
   }
 
   @media screen and (max-width: 524px) and (min-width: 320px) {
     .photoshoot_home {
-      margin-top: -170px;
+      /* margin-top: -170px; */
     }
     .heading_photoshoot {
       font-size: 22px;
@@ -158,6 +159,6 @@
     width: 56%;
   }
   .heading_photoshootservices {
-    margin-top: 190px !important;
+    /* margin-top: 190px !important; */
   }
 }

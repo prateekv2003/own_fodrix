@@ -3,9 +3,10 @@ import styles from "./DashboardNav.module.css";
 import Images from "../../All_Images/Images";
 import { Link, useHistory } from "react-router-dom";
 import { Dashboard } from "@material-ui/icons";
-import {CgClose} from "react-icons/cg";
+import { CgClose } from "react-icons/cg";
 
 const DashboardNav = (props) => {
+  const isPhotographer = localStorage.getItem("isPhotographer");
   const history = useHistory();
   const logoutDashboardHandler = () => {
     localStorage.clear();
@@ -21,9 +22,12 @@ const DashboardNav = (props) => {
     classes = `${styles["DashboardNav-container"]}  ${styles["hamburgerNavDisplay"]}`;
   return (
     <div className={classes}>
-    <div className={styles["DashboardNav-close_icon"]}>
-      <CgClose onClick={() => props.menuDisplayHandler(false)} className={styles["closeMenu-btn"]}/>
-    </div>
+      <div className={styles["DashboardNav-close_icon"]}>
+        <CgClose
+          onClick={() => props.menuDisplayHandler(false)}
+          className={styles["closeMenu-btn"]}
+        />
+      </div>
       <div className={styles["DashboardNav-header__container"]}>
         <div className={styles["DashboardNav-logo"]}>
           <Link to="/">
@@ -47,19 +51,27 @@ const DashboardNav = (props) => {
         </div>
       </div>
       <div className={styles["DashboardNav-route__container"]}>
-        <Link className={styles["DashboardNav-route"]} to="/dashboard">
-          <i className="fas fa-camera"></i>
-          <p>Bookings</p>
-        </Link>
+        {!isPhotographer && (
+          <Link className={styles["DashboardNav-route"]} to="/dashboard">
+            <i className="fas fa-camera"></i>
+            <p>Bookings</p>
+          </Link>
+        )}
         <Link className={styles["DashboardNav-route"]} to="/dashboard/profile">
           <i className="fas fa-user"> </i>
           <p>Profile</p>
         </Link>
+        {isPhotographer && (
+          <Link className={styles["DashboardNav-route"]} to="/dashboard">
+            <i class="fa fa-solid fa-envelope"></i>
+            <p>Leads</p>
+          </Link>
+        )}
         <div
-          className={styles["DashboardNav-route"]+" "+styles["logout-btn"]}
+          className={styles["DashboardNav-route"] + " " + styles["logout-btn"]}
           onClick={logoutDashboardHandler}
         >
-          <i class="fas fa-sign-out-alt" style={{color : "#007bff"}}></i>
+          <i class="fas fa-sign-out-alt" style={{ color: "#007bff" }}></i>
           <p>Logout</p>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { Route, Switch, BrowserRouter, useHistory } from "react-router-dom";
 import DashboardBooking from "./DashboardBooking";
 import DashboardNav from "./DashboardNav";
 import DashboardProfile from "./DashboardProfile";
+import DashboardLeads from "./DashboardLeads";
 import styles from "./NewDashboard.module.css";
 import Images from "../../All_Images/Images";
 
@@ -11,7 +12,7 @@ const NewDashboard = () => {
   const history = useHistory();
   const pathArray = history.location.pathname.split("/");
   const currentPath = pathArray[pathArray.length - 1];
-
+  const isPhotographer = localStorage.getItem('isPhotographer');
   // useEffect(() => {
   //   if (window.innerWidth >= 810) setMenuDisplay(true);
   // }, [menuDisplay]);
@@ -35,7 +36,12 @@ const NewDashboard = () => {
 
       <DashboardNav menuDisplayHandler={menuDisplayHandler} sideNavDisplay={true} />
 
-      {currentPath == "dashboard" ? <DashboardBooking menuDisplayHandler={menuDisplayHandler}/> : <DashboardProfile menuDisplayHandler={menuDisplayHandler}/>}
+      {currentPath == "dashboard" 
+        ? isPhotographer
+          ? <DashboardLeads menuDisplayHandler={menuDisplayHandler}/>
+          : <DashboardBooking menuDisplayHandler={menuDisplayHandler}/> 
+        : <DashboardProfile menuDisplayHandler={menuDisplayHandler}/>
+      }
     </div>
   );
 };

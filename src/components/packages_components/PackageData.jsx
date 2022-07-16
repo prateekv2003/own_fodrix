@@ -2,29 +2,31 @@ export const packages = [
     {
         id: 1,
         title: "Travel",
-        heading1: "1 Hour",
-        heading2: "2 Hour",
-        heading3: "3 Hour",
+        heading1: "Bronze",
+        heading2: "Silver",
+        heading3: "Gold",
         price1: "3,999",
         price2: "5,999",
         price3: "7,999",
         feature1: [
+            "1 Hour shoot",
             "Unlimited Photos",
-            "High Resolution 15 edited photos",
-            "1-2 Location(2 Km in range)",
+            "1-2 locations (2 km in range)",
             "Valid upto 3 People"
         ],
         feature2: [
+            "2 Hour shoot",
             "Unlimited Photos",
-            "High Resolution 25 edited photos",
-            "1-2 Location(2 Km in range)",
+            "High Resolution 25 edited pictures",
+            "1-2 locations (2 km in range)",
             "Valid upto 5 People"
         ],
         feature3: [
-            "Unlimited Photos",
-            "High Resolution 40 edited photos",
-            "Multiple Location<div>(5 Km in range)",
-            "Valid upto 7 People"
+            "3 Hour shoot",
+            "Unlimited Photo's",
+            "High Resolution 40 edited pictures",
+            "Multi locations (5 km in range)",
+            "Valid upto 7 people"
         ],
     },
     {
@@ -33,31 +35,35 @@ export const packages = [
         heading1: "Bronze",
         heading2: "Silver",
         heading3: "Gold",
-        price1: "29,999",
-        price2: "44,999",
-        price3: "64,999",
+        price1: "34,999",
+        price2: "49,999",
+        price3: "69,999",
         feature1: [
             "Traditional Photography",
             "Traditional HD Videography",
-            "Flash Drive with 4k videos",
+            "Flash Drive with edited Video",
             "25 pages Wedding Album",
             "Instagram Reel",
             "Complimentary Surprise"
         ],
         feature2: [
-            "Traditional and Candid Photography",
-            "Traditional Videography",
-            "Flash Drive with edited videos",
-            "40 pages wedding album with bag",
+            "Traditional Photography",
+            "Candid Photography",
+            "Traditional HD Videography",
+            "Flash Drive with edited Video",
+            "35 Sheet Wedding Album ",
             "Instagram Reel",
             "Complimentary Surprise"
         ],
         feature3: [
-            "Traditional and Candid Photography",
-            "Traditional and Cinematic Videography",
-            "Drone Shoot and Cinematic Wedding Film",
+            "Traditional Photography",
+            "Candid Photography",
+            "Traditional HD Videography",
+            "Cinematic Videography",
+            "Drone shoot",
             "Flash Drive with edited videos",
-            "40 pages wedding album with bag",
+            "Cinematic Wedding film",
+            "35 Sheet Wedding Album ",
             "Instagram Reel",
             "Complimentary Surprise"
         ],
@@ -66,62 +72,71 @@ export const packages = [
     {
         id: 3,
         title: "Business",
-        heading1: "1 Hour",
-        heading2: "2 Hour",
-        heading3: "3 Hour",
-        price1: "3,999",
-        price2: "5,999",
-        price3: "7,999",
+        heading1: "Bronze",
+        heading2: "Silver",
+        heading3: "Gold",
+        price1: "11,999",
+        price2: "24,999",
+        price3: "29,999",
         feature1: [
+            "Traditional Photography",
             "Unlimited Photos",
-            "High Resolution 15 edited photos",
-            "1-2 Location(2 Km in range)",
-            "Valid upto 3 People"
+            "Shoot Upto 5 hours"
         ],
         feature2: [
+            "Traditional Photography",
+            "Traditional Videography",
             "Unlimited Photos",
-            "High Resolution 25 edited photos",
-            "1-2 Location(2 Km in range)",
-            "Valid upto 5 People"
+            "Flash Drive with edited videos",
+            "Shoot Upto 5 hours"
         ],
         feature3: [
-            "Unlimited Photos",
-            "High Resolution 40 edited photos",
-            "Multiple Location<div>(5 Km in range)",
-            "Valid upto 7 People"
+            "Traditional Photography",
+            "Traditional Videography",
+            "Drone shoot",
+            "Unlimited Photo's",
+            "Flash Drive with edited videos",
+            "Shoot Upto 5 hours"
         ],
     },
     {
         id: 4,
         title: "Baby",
-        heading1: "1 Hour",
-        heading2: "2 Hour",
-        heading3: "3 Hour",
-        price1: "3,999",
-        price2: "5,999",
-        price3: "7,999",
+        heading1: "Bronze",
+        heading2: "Silver",
+        heading3: "Gold",
+        price1: "14,999",
+        price2: "29,999",
+        price3: "34,999",
         feature1: [
-            "Unlimited Photos",
-            "High Resolution 15 edited photos",
-            "1-2 Location(2 Km in range)",
-            "Valid upto 3 People"
+            "Candid Photography",
+            "Unlimited Photo's",
+            "40 Edited Pictures",
+            "Shoot Upto 5 hours"
         ],
         feature2: [
-            "Unlimited Photos",
-            "High Resolution 25 edited photos",
-            "1-2 Location(2 Km in range)",
-            "Valid upto 5 People"
+            "Candid Photography",
+            "Cinematic Videography",
+            "Cinematic Teaser and video",
+            "Unlimited Photo's ",
+            "Instagram Reels - 3",
+            "Photobook - 50 Photo's",
+            "Shoot Upto 5 hours"
         ],
         feature3: [
-            "Unlimited Photos",
-            "High Resolution 40 edited photos",
-            "Multiple Location<div>(5 Km in range)",
-            "Valid upto 7 People"
+            "Candid Photography",
+            "Cinematic Videography",
+            "Drone Shoot",
+            "Cinematic Teaser and video",
+            "Unlimited Photo's ",
+            "Instagram Reels - 3",
+            "Photobook - 50 Photo's",
+            "Shoot Upto 5 hours"
         ],
     },
     {
         id: 5,
-        title: "Pre Wedding",
+        title: "Pre-Wedding",
         heading1: "Bronze",
         heading2: "Silver",
         heading3: "Gold",
@@ -130,113 +145,187 @@ export const packages = [
         price3: "44,999",
         feature1: [
             "Candid Photography",
-            "Unlimited Photos",
+            "Unlimited Photo's",
             "40 Edited Pictures",
-            "Countdown Picture (5 days)",
+            "Countdown Pictures (5 days)",
+            "Whole day Shoot"
         ],
         feature2: [
             "Candid Photography",
-            "Unlimited Photos",
             "Cinematic Videography",
-            "Cinematic Teaser and Video",
+            "Cinematic Teaser and video",
+            "Unlimited Photo's ",
             "Instagram Reels - 3",
-            "Photobook - 50 Photos",
-            "Countdown Picture (5 days)",
+            "Photobook - 50 Photo's",
+            "Countdown Pictures (5 days)",
+            "Whole day Shoot"
         ],
         feature3: [
             "Candid Photography",
-            "Unlimited Photos",
-            "Cinematic Videography and Drone Shoot",
-            "Cinematic Teaser and Video",
+            "Cinematic Videography",
+            "Drone Shoot",
+            "Cinematic Teaser and video",
+            "Unlimited Photo's ",
             "Instagram Reels - 3",
-            "Photobook - 50 Photos",
-            "Countdown Picture (5 days)",
+            "Photobook - 50 Photo's",
+            "Countdown Pictures (5 days)",
+            "Whole day Shoot"
         ],
     },
 
     {
         id: 6,
         title: "Maternity",
-        heading1: "1 Hour",
-        heading2: "2 Hour",
-        heading3: "3 Hour",
-        price1: "3,999",
-        price2: "5,999",
-        price3: "7,999",
-                feature1: [
-            "Unlimited Photos",
-            "High Resolution 15 edited photos",
-            "1-2 Location(2 Km in range)",
-            "Valid upto 3 People"
+        heading1: "Bronze",
+        heading2: "Silver",
+        heading3: "Gold",
+        price1: "14,999",
+        price2: "29,999",
+        price3: "34,999",
+        feature1: [
+            "Candid Photography",
+            "Unlimited Photo's",
+            "40 Edited Pictures",
+            "Shoot Upto 5 hours"
         ],
         feature2: [
-            "Unlimited Photos",
-            "High Resolution 25 edited photos",
-            "1-2 Location(2 Km in range)",
-            "Valid upto 5 People"
+            "Candid Photography",
+            "Cinematic Videography",
+            "Cinematic Teaser and video",
+            "Unlimited Photo's ",
+            "Instagram Reels - 3",
+            "Photobook - 50 Photo's",
+            "Shoot Upto 5 hours"
         ],
         feature3: [
-            "Unlimited Photos",
-            "High Resolution 40 edited photos",
-            "Multiple Location<div>(5 Km in range)",
-            "Valid upto 7 People"
+            "Candid Photography",
+            "Cinematic Videography",
+            "Drone Shoot",
+            "Cinematic Teaser and video",
+            "Unlimited Photo's ",
+            "Instagram Reels - 3",
+            "Photobook - 50 Photo's",
+            "Shoot Upto 5 hours"
         ],
     },
     {
         id: 7,
-        title: "Personal Portrait",
-        heading1: "1 Hour",
-        heading2: "2 Hour",
-        heading3: "3 Hour",
+        title: "Personal",
+        heading1: "Bronze",
+        heading2: "Silver",
+        heading3: "Gold",
         price1: "3,999",
         price2: "5,999",
         price3: "7,999",
                 feature1: [
-            "Unlimited Photos",
-            "High Resolution 15 edited photos",
-            "1-2 Location(2 Km in range)",
-            "Valid upto 3 People"
+            "1 Hour shoot",
+            "Unlimited Photo's",
+            "High Resolution 15 edited pictures"
         ],
         feature2: [
+            "1 Hour shoot",
             "Unlimited Photos",
-            "High Resolution 25 edited photos",
-            "1-2 Location(2 Km in range)",
-            "Valid upto 5 People"
+            "High Resolution 15 edited pictures"
         ],
         feature3: [
-            "Unlimited Photos",
-            "High Resolution 40 edited photos",
-            "Multiple Location<div>(5 Km in range)",
-            "Valid upto 7 People"
+            "3 Hour shoot",
+            "Unlimited Photo's",
+            "High Resolution 40 edited pictures"
         ],
     },
 
     {
         id: 8,
         title: "Family",
-        heading1: "1 Hour",
-        heading2: "2 Hour",
-        heading3: "3 Hour",
+        heading1: "Bronze",
+        heading2: "Silver",
+        heading3: "Gold",
         price1: "3,999",
         price2: "5,999",
         price3: "7,999",
                 feature1: [
-            "Unlimited Photos",
-            "High Resolution 15 edited photos",
-            "1-2 Location(2 Km in range)",
-            "Valid upto 3 People"
+            "1 Hour shoot",
+            "Unlimited Photo's",
+            "High Resolution 15 edited pictures",
+            "Valid upto 3 people"
         ],
         feature2: [
-            "Unlimited Photos",
-            "High Resolution 25 edited photos",
-            "1-2 Location(2 Km in range)",
-            "Valid upto 5 People"
+            "2 Hour shoot",
+            "Unlimited Photo's",
+            "High Resolution 25 edited pictures",
+            "Valid upto 5 people"
         ],
         feature3: [
-            "Unlimited Photos",
-            "High Resolution 40 edited photos",
-            "Multiple Location<div>(5 Km in range)",
-            "Valid upto 7 People"
+            "3 Hour shoot",
+            "Unlimited Photo's",
+            "High Resolution 40 edited pictures",
+            "Valid upto 7 people"
+        ],
+    },
+
+    {
+        id: 9,
+        title: "Post-Wedding",
+        heading1: "Bronze",
+        heading2: "Silver",
+        heading3: "Gold",
+        price1: "19,999",
+        price2: "39,999",
+        price3: "44,999",
+        feature1: [
+            "Candid Photography",
+            "Unlimited Photo's",
+            "40 Edited Pictures",
+            "Countdown Pictures (5 days)",
+            "Whole day Shoot"
+        ],
+        feature2: [
+            "Candid Photography",
+            "Cinematic Videography",
+            "Cinematic Teaser and video",
+            "Unlimited Photo's ",
+            "Instagram Reels - 3",
+            "Photobook - 50 Photo's",
+            "Countdown Pictures (5 days)",
+            "Whole day Shoot"
+        ],
+        feature3: [
+            "Candid Photography",
+            "Cinematic Videography",
+            "Drone Shoot",
+            "Cinematic Teaser and video",
+            "Unlimited Photo's ",
+            "Instagram Reels - 3",
+            "Photobook - 50 Photo's",
+            "Countdown Pictures (5 days)",
+            "Whole day Shoot"
+        ],
+    },
+
+    {
+        id: 10,
+        title: "Other",
+        heading1: "Bronze",
+        heading2: "Silver",
+        heading3: "Gold",
+        price1: "14,999",
+        price2: "24,999",
+        price3: "34,999",
+                feature1: [
+            "Traditional Photography",
+            "Traditional HD Videography"
+        ],
+        feature2: [
+            "Traditional Photography",
+            "Candid Photography",
+            "Traditional HD Videography"
+        ],
+        feature3: [
+            "Traditional Photography",
+            "Candid Photography",
+            "Traditional HD Videography",
+            "Cinematic Videography",
+            "Drone shoot"
         ],
     },
 ];

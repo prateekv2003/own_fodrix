@@ -1,46 +1,185 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import { useHistory } from "react-router";
+import swal from "sweetalert";
+import "./login.css";
 import "./p-login.css";
 import Images from "../../All_Images/Images";
+import loginjs from "./loginjs";
+import PackageModal from '../package_modal/PackageModal'
 
-export default function PhotograherLogin() {
+global.peruserEmail = "";
+global.loggedIn = true;
+global.userfirstname = "";
+global.usermobileno = "";
+export var logged = null;
+let apiKey = process.env.REACT_APP_CITY_HOME;
+
+export default function Login(props) {
+  const history = useHistory();
+  const [displayModal, setDisplayModal] = useState(false);
+  const [firstname, setFirstname] = useState("");
+  const [email, setEmail] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [password, setPassword] = useState("");
+  const [lemail, setLemail] = useState("");
+  const [lpassword, setLpassword] = useState("");
+
+  const RegisterClick = () => {
+    localStorage.setItem("first_name", firstname);
+    localStorage.setItem("last_name", lastname);
+    localStorage.setItem("email", email);
+    localStorage.setItem("mobile", mobile);
+    localStorage.setItem("password", password);
+
+    localStorage.setItem("pRegistration", true);
+
+    history.push("/OTP");
+  };
+
+  const LoginClick = async () => {
+    console.log("we are in login click");
+
+    const loginData = {
+      l_email: lemail,
+      l_password: lpassword,
+    };
+    console.log("Our object is created");
+
+    const verify_Login = await fetch(apiKey + "/pLogin", {
+      method: "POST",
+      body: JSON.stringify(loginData),
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
+    console.log(verify_Login);
+    const loginResponse = await verify_Login.json();
+    // swal("Login Details" + loginResponse.status + loginResponse.message);
+    if (loginResponse.status === true) {
+      localStorage.setItem("userFirstName", loginResponse.data.b_firstname);
+      localStorage.setItem("userMobile", loginResponse.data.b_mobile);
+      localStorage.setItem("userEmail", loginResponse.data.b_email);
+      localStorage.setItem("isPhotographer", true);
+
+      global.loggeduserlogged = true;
+
+      localStorage.setItem("auth", true);
+      // localStorage.setItem("isuserloged", true);
+      // window.localStorage.setItem("isAuth", "true");
+      // console.log(window.localStorage.getItem("isAuth"));
+      history.push("/dashboard");
+      document.location.reload();
+      // console.log("WE are in if dashboard");
+    } else {
+      swal("User not found");
+      // localStorage.setItem("auth", false);
+      console.log(localStorage.getItem("auth"));
+      // global.loggeduserlogged = false;
+      // global.loggedIn = false;
+      //invalid id or password
+    }
+  };
+
+  useEffect(() => {
+    loginjs();
+
+    const title = document.querySelector("title");
+    title.innerText = `Login | Fodrix`;
+
+    const desc = document.querySelector("meta[name='description']");
+    desc.setAttribute("content", "Login into your Fodrix Account - Fodrix");
+
+    const canonical = document.querySelector("link[rel='canonical']");
+    canonical.setAttribute("href", "https://www.fodrix.com/pLogin");
+  }, []);
+  // verify btn redirect to login
   return (
     <>
-      <div className="img-fluid background_login">
-        <div class="form_plogin">
-          <div class="image-section_plogin">
-            <img src={Images.fodrixLogo} alt=" not Found" />
-          </div>
-          <p class="p1_plogin">Photographer Login</p>
+      {/* <Helmet>
+        <title>Login | Fodrix</title>
+        <meta
+          name="description"
+          content="Login into your Fodrix Account - Fodrix"
+        />
+      </Helmet> */}
 
-          <p class="p2_plogin">
-            Welcome back, sign in to access jobs and other features
-          </p>
-          <form>
-            <br />
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Enter your phone number"
-            ></input>
-            <a href="/dashboard">
-              <button>Send OTP</button>
-            </a>
-            <br />
-            <pre />
-            <input type="number " name="OTP" placeholder="OTP" />
-            <a href="/dashboard">
-              <button>Verify</button>
-            </a>
-            <pre />
-            <a href="#" className="ResendSubmit">
-              Resend OTP
-            </a>
-            <pre />
+      {displayModal && <PackageModal setDisplayModal={setDisplayModal} />}
 
-            <pre />
-          </form>
+      <div class="login-box">
+        <img
+          src={Images.fodrixiconnew}
+          className="image_login"
+          alt="Fodrix Logo"
+          width="50px"
+          height="137px"
+          style={{ paddingBottom: "13px" }}
+        />
+        <div className="pLogin_header">
+          <h3>Photographer Login</h3>
         </div>
+
+        <div class="email-login">
+          <label for="u-form" className="label_login">
+            Email
+          </label>
+          <div class="u-form-group">
+            <input
+              type="email"
+              placeholder="Email"
+              id="l_email"
+              onChange={(val) => {
+                setLemail(val.target.value);
+              }}
+              required
+            />
+          </div>
+          <label for="u-form" className="label_login">
+            Password
+          </label>
+          <div class="u-form-group">
+            <input
+              type="password"
+              placeholder="Password"
+              id="l_password"
+              onChange={(val) => {
+                setLpassword(val.target.value);
+              }}
+              required
+            />
+          </div>
+
+          <div class="u-form-group">
+            <button
+              onClick={() => {
+                if (lpassword !== "" || lemail !== "") {
+                  LoginClick();
+                } else {
+                  swal("All fields are compulsory!");
+                }
+              }}
+            >
+              Log in
+            </button>
+          </div>
+
+          <div class="foot-lnk">
+            <a href="#forgot" style={{ color: "#007bff" }}>
+              Forgot Password?
+            </a>
+          </div>
+          <div class="foot-lnk">
+            <label for="pass">
+              Don't Have an account?
+              <a href="#" className="active signup-link" onClick={()=>setDisplayModal(true)}>
+                &nbsp;Register
+              </a>
+            </label>
+          </div>
+        </div>
+        
       </div>
     </>
   );

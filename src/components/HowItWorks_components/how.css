@@ -1,8 +1,8 @@
 .how {
   background-color: aliceblue;
-  max-width: 92%;
+  max-width: 82%;
   min-height: 350px;
-  /* margin: -5%; */
+  margin-top: 33px;
 }
 
 .div2subhead_how {
@@ -144,7 +144,9 @@ li {
   align-items: center;
   margin-top: 5px;
 }
-
+.how-h1 {
+  margin: 15px;
+}
 @media (max-width: 1230px) {
   .search_heading {
     padding-top: 68px;
@@ -153,12 +155,15 @@ li {
     text-align: center;
   }
   .search_how {
-    width: 40vw;
     margin: auto;
   }
 }
 
 @media (max-width: 840px) {
+  .how {
+    max-width: 85%;
+    margin-left: 51px;
+  }
   .how-h1 {
     font-size: 2rem;
     letter-spacing: 2px;
@@ -166,6 +171,7 @@ li {
   }
   .div2subhead_how p {
     text-align: center;
+    margin: 30px;
     margin-bottom: 78px;
   }
   .how {
@@ -232,5 +238,9 @@ li {
   }
   .searchTerm::placeholder {
     font-size: 10px !important;
+  }
+  .how {
+    margin-left: 28px;
+    padding: 15px;
   }
 }
