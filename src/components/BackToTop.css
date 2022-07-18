@@ -1,14 +1,18 @@
 
-#navright{
+#navright-backToTop{
     display:inline-block;
     position: fixed;
-    top: 80vh;
+    top: 90vh;
     right: 10px;
     z-index: 1000000000;
     cursor: pointer;
 }
 
-.wtsp-icon{
-    color: #00e300;
+.backToTop-icon{
     font-size: 2.5rem;
+    /* display: none */
+}
+
+.backToTop-icon path{
+    stroke: #007bff;
 }

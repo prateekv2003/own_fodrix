@@ -20,7 +20,7 @@ function paymentStart() {
   const bookingTime = localStorage.getItem("bookingtime");
   const photoshootPackage = localStorage.getItem("c_package");
   const photoshootService = localStorage.getItem("service");
-  const packagePrice = localStorage.getItem("package_price").replace(/,/g, '');
+  const packagePrice = localStorage.getItem("package_price").replace(/,/g, "");
 
   let apiURL = "https://api.fodrix.com/bookashoot";
   fetch(apiURL, {
@@ -31,7 +31,7 @@ function paymentStart() {
       c_mobile: mobile,
       location: city,
       date: bookingDate,
-      time: bookingTime, 
+      time: bookingTime,
       user_services1: photoshootService,
       package_price: parseInt(packagePrice),
       c_package: photoshootPackage,
@@ -41,8 +41,7 @@ function paymentStart() {
     },
   })
     .then((response) => response.json())
-    .then((data) => {
-    })
+    .then((data) => {})
     .catch((e) => {
       throw new Error(e);
     });
@@ -53,21 +52,7 @@ function paymentStart() {
     // alert("Amount is required");
     swal("Failed", "Amount is required", "error");
   } else {
-    // book id
-    // $.ajax({
-    //   url: url1,
-    //   //{ apiKey } + "bookashoot",
-    //   data: JSON.stringify({ amount: amount, info: "order_request" }),
-    //   contentType: "application/json",
-    //   type: "POST",
-    //   dataType: "json",
-    //   success: function (response) {
-
-    //     //invoked when success
-    //     //store the id from response  : statusId
-    //   },
-    // });
-
+    /*
     $.ajax({
       url: url2,
       // { apiKey } + "create_order",
@@ -86,8 +71,8 @@ function paymentStart() {
             currrency: "INR",
             name: "Fodrix",
             description: "Payment",
-            // image:
-            //   "https://media-exp1.licdn.com/dms/image/C560BAQER8YRjR9JiXw/company-logo_200_200/0/1625827442861?e=1634169600&v=beta&t=XxqwUr-hhAo59BAUgBOIz4dcWHoylOkDgUZAFv7kN7I",
+            image:
+              "https://media-exp1.licdn.com/dms/image/C560BAQER8YRjR9JiXw/company-logo_200_200/0/1625827442861?e=1634169600&v=beta&t=XxqwUr-hhAo59BAUgBOIz4dcWHoylOkDgUZAFv7kN7I",
             order_id: response.id,
             handler: function (response) {
               // call api updateshoot and use the id which is returned by the bookashoot api.
@@ -109,6 +94,75 @@ function paymentStart() {
           });
 
           rzp.open();
+        }
+      },
+      error: function (error) {
+        //invoked when error
+        alert("something went wrong");
+      },
+
+
+    });
+*/
+
+    $.ajax({
+      url: url2,
+      // { apiKey } + "create_order",
+      data: JSON.stringify({ amount: amount, info: "order_request" }),
+      contentType: "application/json",
+      type: "POST",
+      dataType: "json",
+      success: function (response) {
+        //invoked when success
+        if (response.status === true) {
+          //open payment form
+        //   let order_token = response.id;
+        
+          let order_token = "fjejkdfdbcbafbdbmffab";
+          const cashfree = new window.Cashfree();
+          const paymentDom = document.getElementById("modal_bg");
+          const packageModal = document.getElementById("packageModal");
+          const success = function (data) {
+            if (data.order && data.order.status == "PAID") {
+              swal("Success!");
+            } else {
+              //order is still active
+              swal("Fail! Order is still active.");
+            }
+          };
+          let failure = function (data) {
+            swal(data.order.errorText);
+
+            console.log(data)
+            console.log(data.order)
+          };
+
+          let dropConfig = {
+            components: ["order-details", "card", "netbanking", "app", "upi"],
+            orderToken: order_token,
+            onSuccess: success,
+            onFailure: failure,
+            style: {
+              backgroundColor: "#ffffff",
+              color: "#11385b",
+              fontFamily: "Lato",
+              fontSize: "14px",
+              errorColor: "#ff0000",
+              theme: "light", //(or dark)
+            },
+          };
+          if (order_token == "") {
+            $.ajax({
+              url: "fetchtoken.php",
+              success: function (result) {
+                dropConfig.orderToken = result["order_token"];
+                cashfree.initialiseDropin(paymentDom, dropConfig);
+              },
+            });
+          } else {
+            cashfree.initialiseDropin(paymentDom, dropConfig);
+          }
+          packageModal.style.display = "none"
         }
       },
       error: function (error) {

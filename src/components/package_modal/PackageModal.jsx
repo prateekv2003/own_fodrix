@@ -4,16 +4,15 @@ import Images from "../../All_Images/Images";
 import loginjs from "../login_components/loginjs";
 import { MdClose } from "react-icons/md";
 import { packages } from "../packages_components/PackageData";
-import paymentStart from "../bookashoot_components/payment";
+import paymentStart from "../bookashoot_components/new_payment";
 
 const PackageModal = (props) => {
-
   let fname = "";
   let lname = "";
   let userMobile = "";
   let userEmail = "";
   let auth = localStorage.getItem("auth");
-  if(auth){
+  if (auth) {
     fname = localStorage.getItem("userFirstName");
     lname = localStorage.getItem("userLastName");
     userMobile = localStorage.getItem("userMobile");
@@ -29,28 +28,27 @@ const PackageModal = (props) => {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [bookedPackage, setPackage] = useState("");
+  const [bookedPackagePrice, setPackagePrice] = useState("");
   const [comment, setComment] = useState("");
   const [coupon, setCoupon] = useState("");
-  const [gold, setGold] = useState("Price: - ");
-  const [silver, setSilver] = useState("Price: - ");
-  const [bronze, setBronze] = useState("Price: - ");
+  const [gold, setGold] = useState(" - ");
+  const [silver, setSilver] = useState(" - ");
+  const [bronze, setBronze] = useState(" - ");
 
-  
   const closeBookingModal = () => {
     props.setDisplayModal(false);
   };
   const serviceHandler = () => {
-
+    
     // Setting field which may pre fetched as default like name, email, mobile, city, service, package etc.
-    // From /photoshoot_services page. 
-    setService(document.getElementById('service').value);
-    // From //City_Home page. 
-    setCity(document.getElementById('booked-city').value);
-    // From localStorage if user is authorized page. 
-    setFirstname(document.getElementById('first_name').value);
-    setLastname(document.getElementById('last_name').value);
-    setMobile(document.getElementById('mobile_register').value);
-    setEmail(document.getElementById('email_register').value);
+    // From /photoshoot_services page.
+    // From //City_Home page.
+    setCity(document.getElementById("booked-city").value);
+    // From localStorage if user is authorized page.
+    setFirstname(document.getElementById("first_name").value);
+    setLastname(document.getElementById("last_name").value);
+    setMobile(document.getElementById("mobile_register").value);
+    setEmail(document.getElementById("email_register").value);
 
     packages.find((pack) => {
       if (pack.title === service) {
@@ -59,8 +57,6 @@ const PackageModal = (props) => {
         setBronze(pack.price1);
       }
     });
-
-    setService(service);
   };
 
   const BookPackageHandler = (e) => {
@@ -68,21 +64,27 @@ const PackageModal = (props) => {
     localStorage.setItem("bookingdate", date);
     localStorage.setItem("bookingtime", time);
     localStorage.setItem("c_package", bookedPackage);
-    localStorage.setItem("userFirstName", firstname);
+    localStorage.setItem("package_price", bookedPackagePrice);
+    localStorage.setItem("first_name", firstname);
     localStorage.setItem("last_name", lastname);
-    localStorage.setItem("userEmail", email);
-    localStorage.setItem("userMobile", mobile);
+    localStorage.setItem("email", email);
+    localStorage.setItem("mobile", mobile);
     localStorage.setItem("city", city);
+    localStorage.setItem("service", service);
     paymentStart();
   };
 
   useEffect(() => {
     serviceHandler();
-  }, [])
-  
+  }, [service]);
+  useEffect(() => {
+    setService(props.service)
+    serviceHandler();
+  }, []);
+
   return (
-    <div className="modal_bg">
-      <div className="book_package_modal login-box">
+    <div className="modal_bg" id="modal_bg">
+      <div className="book_package_modal login-box" id="packageModal">
         <img
           src={Images.fodrixiconnew}
           className="image_login"
@@ -262,8 +264,8 @@ const PackageModal = (props) => {
             <select
               id="service"
               defaultValue={props.service}
-              onChange={() => {
-                serviceHandler();
+              onChange={(e) => {
+                setService(e.target.selectedOptions[0].value);
               }}
               required
             >
@@ -283,13 +285,28 @@ const PackageModal = (props) => {
               id="package"
               onChange={(val) => {
                 setPackage(val.target.value);
+                setPackagePrice(
+                  val.target.selectedOptions[0].attributes.price.value
+                );
               }}
               required
             >
-              <option value=""> Select Package </option>{" "}
-              <option value="bronze"> Bronze ({bronze}Rs.) </option>{" "}
-              <option value="silver"> Silver ({silver}Rs.) </option>{" "}
-              <option value="gold"> Gold ({gold}Rs.) </option>{" "}
+              <option value="" price="">
+                {" "}
+                Select Package{" "}
+              </option>{" "}
+              <option value="Bronze" price={bronze}>
+                {" "}
+                Bronze ({bronze}Rs.){" "}
+              </option>{" "}
+              <option value="Silver" price={silver}>
+                {" "}
+                Silver ({silver}Rs.){" "}
+              </option>{" "}
+              <option value="Gold" price={gold}>
+                {" "}
+                Gold ({gold}Rs.){" "}
+              </option>{" "}
             </select>{" "}
           </div>
 
@@ -370,16 +387,13 @@ const PackageModal = (props) => {
               }}
             />
           </div>
-
-          <div className="input-group">
-            <button
-              className="btn book_package-submit_btn"
-              // onClick={RegisterClick}
-              type="submit"
-            >
-              Book Now
-            </button>
-          </div>
+          <button
+            className="book_package-submit_btn"
+            // onClick={RegisterClick}
+            type="submit"
+          >
+            Book Now
+          </button>
         </form>
       </div>
     </div>

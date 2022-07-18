@@ -15,6 +15,7 @@ import { useEffect } from "react";
 import CallbackPopup from "../mainUtils/CallbackPopup";
 import { useHistory } from "react-router";
 import OurPartners from "./homePage_components/OurPartners";
+import BackToTop from "./BackToTop";
 export default function Home() {
   const [popupDisplay, setPopupDisplay] = useState(false);
   useEffect(() => {
@@ -56,6 +57,7 @@ export default function Home() {
         callBackForm={false}
       />
       <Whatsapp />
+      <BackToTop />
       <div id="toppage" className="container-fluid">
         <div className="row">
           <div className="Top-band_home"> </div>{" "}

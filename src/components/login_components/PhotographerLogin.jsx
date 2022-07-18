@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-
 import { useHistory } from "react-router";
 import swal from "sweetalert";
 import "./login.css";
 import "./p-login.css";
 import Images from "../../All_Images/Images";
-import loginjs from "./loginjs";
-import PackageModal from '../package_modal/PackageModal'
+import P_RegistorModal from './P_RegistorModal'
 
 global.peruserEmail = "";
 global.loggedIn = true;
@@ -25,27 +23,13 @@ export default function Login(props) {
   const [password, setPassword] = useState("");
   const [lemail, setLemail] = useState("");
   const [lpassword, setLpassword] = useState("");
-
-  const RegisterClick = () => {
-    localStorage.setItem("first_name", firstname);
-    localStorage.setItem("last_name", lastname);
-    localStorage.setItem("email", email);
-    localStorage.setItem("mobile", mobile);
-    localStorage.setItem("password", password);
-
-    localStorage.setItem("pRegistration", true);
-
-    history.push("/OTP");
-  };
-
+  
   const LoginClick = async () => {
-    console.log("we are in login click");
 
     const loginData = {
       l_email: lemail,
       l_password: lpassword,
     };
-    console.log("Our object is created");
 
     const verify_Login = await fetch(apiKey + "/pLogin", {
       method: "POST",
@@ -55,11 +39,11 @@ export default function Login(props) {
         "Content-Type": "application/json",
       },
     });
-    console.log(verify_Login);
+
     const loginResponse = await verify_Login.json();
-    // swal("Login Details" + loginResponse.status + loginResponse.message);
     if (loginResponse.status === true) {
       localStorage.setItem("userFirstName", loginResponse.data.b_firstname);
+      localStorage.setItem("userLastName", loginResponse.data.b_lastname);
       localStorage.setItem("userMobile", loginResponse.data.b_mobile);
       localStorage.setItem("userEmail", loginResponse.data.b_email);
       localStorage.setItem("isPhotographer", true);
@@ -75,6 +59,8 @@ export default function Login(props) {
       // console.log("WE are in if dashboard");
     } else {
       swal("User not found");
+      console.log(verify_Login)
+      console.log(loginData)
       // localStorage.setItem("auth", false);
       console.log(localStorage.getItem("auth"));
       // global.loggeduserlogged = false;
@@ -84,8 +70,6 @@ export default function Login(props) {
   };
 
   useEffect(() => {
-    loginjs();
-
     const title = document.querySelector("title");
     title.innerText = `Login | Fodrix`;
 
@@ -106,7 +90,7 @@ export default function Login(props) {
         />
       </Helmet> */}
 
-      {displayModal && <PackageModal setDisplayModal={setDisplayModal} />}
+      {displayModal && <P_RegistorModal setDisplayModal={setDisplayModal} />}
 
       <div class="login-box">
         <img
@@ -171,12 +155,10 @@ export default function Login(props) {
             </a>
           </div>
           <div class="foot-lnk">
-            <label for="pass">
               Don't Have an account?
               <a href="#" className="active signup-link" onClick={()=>setDisplayModal(true)}>
                 &nbsp;Register
               </a>
-            </label>
           </div>
         </div>
         

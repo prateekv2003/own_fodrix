@@ -48,7 +48,7 @@ export class Dashboardimageload extends Component {
               id="img_dashboardupload"
               className="img_dashboardupload"
             />
-            <span> welcome {localStorage.getItem("userFirstName")} </span>{" "}
+            <span> Welcome {localStorage.getItem("userFirstName")}! </span>{" "}
           </div>{" "}
           <div className="label">
             <label htmlFor="input" className="image-upload">

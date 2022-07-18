@@ -9,9 +9,6 @@ const OTP = () => {
   const mobile = localStorage.getItem("mobile");
   const password = localStorage.getItem("password");
 
-  // Checking is it is photographer registration.
-  const pRegistration = localStorage.getItem("pRegistration"); 
-
   const sendOtptomail = async () => {
     const datareg = {
       to: email,
@@ -66,7 +63,7 @@ const OTP = () => {
           b_mobile: mobile,
           b_password: password,
         };
-        const api = pRegistration ? "/register_photographer" : "/register_user"
+        const api = "/register_user"
         await fetch(apiKey + api, {
           method: "POST",
           body: JSON.stringify(registerData),
@@ -78,7 +75,7 @@ const OTP = () => {
         // const otpreg3 = await otpverifyreg1.json();
 
         swal("User register successfully").then(function () {
-          window.location = pRegistration ? "/pLogin" : "/login";
+          window.location = "/login";
         });
       } else {
         alert("Incorrect OTP");

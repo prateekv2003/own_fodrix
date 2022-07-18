@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./DashboardNav.module.css";
 import Images from "../../All_Images/Images";
 import { Link, useHistory } from "react-router-dom";
-import { Dashboard } from "@material-ui/icons";
 import { CgClose } from "react-icons/cg";
 
 const DashboardNav = (props) => {

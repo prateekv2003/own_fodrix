@@ -51,6 +51,7 @@
 .pending-booking__inner h3 {
   font-family: "Poppins", sans-serif !important;
   font-weight: 400;
+  font-size: 1rem;
   text-shadow: 2px 2px #eaeaea;
 }
 

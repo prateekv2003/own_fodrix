@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./CallbackPopup.module.css";
-import CloseIcon from "@material-ui/icons/Close";
+import { MdClose } from "react-icons/md";
 import CallbackAlert from "./CallbackAlert";
 import { useRef } from "react";
 
@@ -152,7 +152,7 @@ const CallbackPopup = (props) => {
           )}
 
           <div id={formContainer__inner}>
-            <CloseIcon
+            <MdClose
               onClick={() => {
                 props.closePopup(false);
               }}

@@ -6,13 +6,17 @@
 }
 .btn-group,
 .btn-group-vertical {
+  display: grid;
   position: relative;
   vertical-align: middle;
   width: 76%;
-  margin-inline: auto;
+  margin-inline: auto; 
   border: 1px solid #ddd;
-  display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.login-box .btn-group{
+  display: grid;
 }
 .btn-group .btn {
   /* flex: 1 1 auto; */
@@ -33,7 +37,7 @@
   font-size: 11px;
   padding-bottom: 8px;
   width: 78%;
-  margin-left: 56px;
+  margin: auto;
 }
 .foot-lnk {
   display: block;

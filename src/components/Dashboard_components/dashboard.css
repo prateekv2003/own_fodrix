@@ -402,7 +402,11 @@
 
 .label {
   position: absolute;
-  top: 0px;
+  top: 2rem;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 input#input {
@@ -543,6 +547,12 @@ input#input {
   height: 400px;
   background-color: #cbeefc;
   padding: 10px;
+}
+
+.img-holder span {
+  margin-left: 1rem;
+  font-family: cursive;
+  font-size: 21px;
 }
 
 @supports (
